@@ -102,13 +102,19 @@
             z-index: -1;
         }
 
-        .egos-page-title-image {
-            display: block;
-            width: 240px;
-            height: auto;
-            margin: 0 auto;
-            max-width: 100%;
-        }
+       .egos-page-title-image {
+    display: block;
+    width: 240px;
+    height: auto;
+    margin: 0 auto;
+    max-width: 100%;
+
+    /* Same glow as the hero logo */
+    filter:
+        drop-shadow(0 0 5px rgba(255,255,255,0.35))
+        drop-shadow(0 0 12px rgba(255,255,255,0.18));
+
+    animation: eGosLogoGlow 3s ease-in-out 1.5s infinite;
 
         .egos-video-item iframe {
             display: block;
