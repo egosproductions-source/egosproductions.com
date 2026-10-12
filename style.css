@@ -2256,30 +2256,34 @@ page title glow
     }
 }
 
-  /* Header logo: hidden while the hero title is visible */
+
+/* Header logo: hide while the hero title is visible */
 .classy-navbar .nav-brand {
-    transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+    transition: opacity 0.4s ease, transform 0.4s ease,
+                visibility 0s linear 0s;
 }
 
-body.header-ready:not(.header-docked) .nav-brand {
-    opacity: 0;
-    visibility: hidden;
+body.header-ready:not(.header-docked) .classy-navbar .nav-brand {
+    opacity: 0 !important;
+    visibility: hidden !important;
     transform: translateY(-8px);
+    pointer-events: none;
 }
 
-/* Header docks to the top once the hero title is gone */
+/* Restore logo when the page is scrolled past the hero */
+body.header-docked .classy-navbar .nav-brand {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* Keep the docked header above the page content */
 body.header-docked .header-area {
     position: fixed;
     top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
     background: rgba(0, 0, 0, 0.85);
-}
-
-  .egos-archive-heading {
-    text-align: center;
-    margin: 20px 0 35px;
-}
-
-.egos-archive {
-    max-width: 1100px;
-    margin: 0 auto 70px;
 }
