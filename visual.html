@@ -227,9 +227,6 @@
         /* =========================================
            SECTION HEADING
            ========================================= */
-/* =========================================
-           SECTION HEADINGS
-           ========================================= */
 
         .egos-section-heading {
             text-align: center;
@@ -285,85 +282,34 @@
         }
 
 
-        /* =========================================
-           IMAGE GRID
-           ========================================= */
+       /* =========================================
+   IMAGE GRID — 5 x 5
+   ========================================= */
 
-        .egos-visual-grid {
-            display: grid;
+.egos-visual-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    width: 100%;
+}
 
-            grid-template-columns: repeat(2, 1fr);
+.egos-visual-grid-item {
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background: #000;
+}
 
-            gap: 25px;
+.egos-visual-grid-item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
 
-            width: 100%;
-        }
-
-
-        .egos-visual-grid-item {
-            width: 100%;
-
-            overflow: hidden;
-
-            background: #000;
-        }
-
-
-        .egos-visual-grid-item img {
-            display: block;
-
-            width: 100%;
-
-            height: 400px;
-
-            object-fit: cover;
-
-            transition: transform 0.5s ease;
-        }
-
-
-        .egos-visual-grid-item:hover img {
-            transform: scale(1.03);
-        }
-
-
-        /* =========================================
-           CONTACT CTA
-           ========================================= */
-
-        .egos-contact-section {
-            position: relative;
-
-            width: 100%;
-
-            padding: 80px 0;
-
-            margin: 0;
-
-            background-image:
-                linear-gradient(
-                    rgba(0,0,0,0.45),
-                    rgba(0,0,0,0.45)
-                ),
-                url('images/g (9).jpg');
-
-            background-size: cover;
-
-            background-position: center;
-
-            background-attachment: fixed;
-        }
-
-
-        .egos-contact-section .section-heading {
-            margin-bottom: 0;
-        }
-
-
-        .egos-contact-section .section-heading h2 {
-            color: #fff;
-        }
-
+.egos-visual-grid-item:hover img {
+    transform: scale(1.05);
+}
 
         /* =========================================
            MOBILE
@@ -396,21 +342,13 @@
             }
 
 
-            .egos-visual-grid {
-                grid-template-columns: 1fr;
-
-                gap: 20px;
-            }
-
-
-            .egos-visual-grid-item img {
-                height: 350px;
-            }
+      .egos-visual-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+}
 
 
-            .egos-contact-section {
-                background-attachment: scroll;
-            }
+            
 
         }
 
@@ -586,71 +524,39 @@
 
     <section class="egos-media-section egos-visual-gallery">
 
-        <div class="egos-media-container">
+      <div class="egos-visual-grid">
 
+    <div class="egos-visual-grid-item"><img src="images/gvisual (1).JPG" alt="e-Gos visual artwork" loading="lazy"></div>
+    <div class="egos-visual-grid-item"><img src="images/gvisual (2).JPG" alt="e-Gos visual artwork" loading="lazy"></div>
+    <div class="egos-visual-grid-item"><img src="images/gvisual (3).JPG" alt="e-Gos visual artwork" loading="lazy"></div>
+    <div class="egos-visual-grid-item"><img src="images/gvisual (4).JPG" alt="e-Gos visual artwork" loading="lazy"></div>
+    <div class="egos-visual-grid-item"><img src="images/gvisual (5).JPG" alt="e-Gos visual artwork" loading="lazy"></div>
 
-            <!-- SECTION HEADING -->
+    <div class="egos-visual-grid-item"><img src="images/gvisual (6).JPG" alt="e-Gos visual artwork" loading="lazy"></div>
+    <div class="egos-visual-grid-item"><img src="images/gvisual (7).JPG" alt="e-Gos visual artwork" loading="lazy"></div>
+    <div class="egos-visual-grid-item"><img src="images/gvisual (8).JPG" alt="e-Gos visual artwork" loading="lazy"></div>
+    <div class="egos-visual-grid-item"><img src="images/gvisual (9).JPG" alt="e-Gos visual artwork" loading="lazy"></div>
+    <div class="egos-visual-grid-item"><img src="images/gvisual (10).JPG" alt="e-Gos visual artwork" loading="lazy"></div>
 
-            <div class="egos-section-heading">
+    <div class="egos-visual-grid-item"><img src="images/gvisual (11).JPG" alt="e-Gos visual artwork" loading="lazy"></div>
+    <div class="egos-visual-grid-item"><img src="images/gvisual (12).JPG" alt="e-Gos visual artwork" loading="lazy"></div>
+    <div class="egos-visual-grid-item"><img src="images/gvisual (13).JPG" alt="e-Gos visual artwork" loading="lazy"></div>
+    <div class="egos-visual-grid-item"><img src="images/gvisual (14).JPG" alt="e-Gos visual artwork" loading="lazy"></div>
+    <div class="egos-visual-grid-item"><img src="images/gvisual (15).JPG" alt="e-Gos visual artwork" loading="lazy"></div>
 
-                <h2>Gallery</h2>
+    <div class="egos-visual-grid-item"><img src="images/gvisual (16).JPG" alt="e-Gos visual artwork" loading="lazy"></div>
+    <div class="egos-visual-grid-item"><img src="images/gvisual (17).JPG" alt="e-Gos visual artwork" loading="lazy"></div>
+    <div class="egos-visual-grid-item"><img src="images/gvisual (18).JPG" alt="e-Gos visual artwork" loading="lazy"></div>
+    <div class="egos-visual-grid-item"><img src="images/gvisual (19).JPG" alt="e-Gos visual artwork" loading="lazy"></div>
+    <div class="egos-visual-grid-item"><img src="images/gvisual (20).JPG" alt="e-Gos visual artwork" loading="lazy"></div>
 
-            </div>
+    <div class="egos-visual-grid-item"><img src="images/gvisual (21).JPG" alt="e-Gos visual artwork" loading="lazy"></div>
+    <div class="egos-visual-grid-item"><img src="images/gvisual (22).JPG" alt="e-Gos visual artwork" loading="lazy"></div>
+    <div class="egos-visual-grid-item"><img src="images/gvisual (23).JPG" alt="e-Gos visual artwork" loading="lazy"></div>
+    <div class="egos-visual-grid-item"><img src="images/gvisual (24).JPG" alt="e-Gos visual artwork" loading="lazy"></div>
+    <div class="egos-visual-grid-item"><img src="images/gvisual (25).JPG" alt="e-Gos visual artwork" loading="lazy"></div>
 
-
-            <!-- FEATURE IMAGE -->
-
-            <div class="egos-visual-feature">
-
-                <img
-                    src="images/gvisual (1).JPG"
-                    alt="e-Gos visual artwork">
-
-            </div>
-
-
-            <!-- IMAGE GRID -->
-
-            <div class="egos-visual-grid">
-
-
-                <div class="egos-visual-grid-item">
-
-                    <img
-                        src="images/gvisual (2).JPG"
-                        alt="e-Gos visual artwork">
-
-                </div>
-
-
-                <div class="egos-visual-grid-item">
-
-                    <img
-                        src="images/gvisual (3).JPG"
-                        alt="e-Gos visual artwork">
-
-                </div>
-
-
-                <div class="egos-visual-grid-item">
-
-                    <img
-                        src="images/gvisual (4).JPG"
-                        alt="e-Gos visual artwork">
-
-                </div>
-
-
-                <div class="egos-visual-grid-item">
-
-                    <img
-                        src="images/gvisual (5).JPG"
-                        alt="e-Gos visual artwork">
-
-                </div>
-
-
-            </div>
+</div>
 
         </div>
 
