@@ -577,34 +577,28 @@ function shareEGos(event) {
 }
 
 (function () {
-    // First match wins, so each page uses its most specific title
     var selectors = [
-        '.hero-image-main',                  // home page logo
-        '.egos-page-title-image',            // inner pages with title image
-        '.egos-internal-hero-content h2',    // Visual page text title
-        '.egos-internal-hero'                // fallback (e.g. Contact)
+        '.hero-image-main',
+        '.egos-page-title-image',
+        '.egos-internal-hero-content h2',
+        '.egos-internal-hero'
     ];
 
     var target = null;
     for (var i = 0; i < selectors.length && !target; i++) {
         target = document.querySelector(selectors[i]);
     }
-    if (!target) return;
+    if (!target) { return; }
 
-    function setHidden(hide) {
-        document.body.classList.toggle('header-logo-hidden', hide);
+    document.body.classList.add('header-ready');
+
+    function update() {
+        var r = target.getBoundingClientRect();
+        // Docked once the title's bottom edge is above the viewport top
+        document.body.classList.toggle('header-docked', r.bottom < 60);
     }
 
-    // Hide immediately; reveal once the title is off-screen
-    setHidden(true);
-
-    if ('IntersectionObserver' in window) {
-        new IntersectionObserver(function (entries) {
-            setHidden(entries[0].isIntersecting);
-        }, { threshold: 0 }).observe(target);
-    } else {
-        window.addEventListener('scroll', function () {
-            setHidden(target.getBoundingClientRect().bottom > 0);
-        });
-    }
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    update();
 })();
