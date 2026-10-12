@@ -2607,18 +2607,20 @@ page title glow
     }
 }
 
-  /* Header logo hidden until the hero title scrolls away */
-body.header-logo-hidden .nav-brand {
+  /* Header logo: hidden while the hero title is visible */
+.classy-navbar .nav-brand {
+    transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+}
+
+body.header-ready:not(.header-docked) .nav-brand {
     opacity: 0;
     visibility: hidden;
     transform: translateY(-8px);
 }
 
-.classy-navbar .nav-brand {
-    transition:
-        opacity 0.4s ease,
-        transform 0.4s ease,
-        visibility 0.4s;
-}
-
+/* Header docks to the top once the hero title is gone */
+body.header-docked .header-area {
+    position: fixed;
+    top: 0;
+    background: rgba(0, 0, 0, 0.85);
 }
