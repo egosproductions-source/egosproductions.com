@@ -575,3 +575,36 @@ function shareEGos(event) {
         alert('Copy this page URL to share e-Gos Productions: ' + window.location.href);
     }
 }
+
+(function () {
+    // First match wins, so each page uses its most specific title
+    var selectors = [
+        '.hero-image-main',                  // home page logo
+        '.egos-page-title-image',            // inner pages with title image
+        '.egos-internal-hero-content h2',    // Visual page text title
+        '.egos-internal-hero'                // fallback (e.g. Contact)
+    ];
+
+    var target = null;
+    for (var i = 0; i < selectors.length && !target; i++) {
+        target = document.querySelector(selectors[i]);
+    }
+    if (!target) return;
+
+    function setHidden(hide) {
+        document.body.classList.toggle('header-logo-hidden', hide);
+    }
+
+    // Hide immediately; reveal once the title is off-screen
+    setHidden(true);
+
+    if ('IntersectionObserver' in window) {
+        new IntersectionObserver(function (entries) {
+            setHidden(entries[0].isIntersecting);
+        }, { threshold: 0 }).observe(target);
+    } else {
+        window.addEventListener('scroll', function () {
+            setHidden(target.getBoundingClientRect().bottom > 0);
+        });
+    }
+})();
