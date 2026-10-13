@@ -614,7 +614,7 @@ body.header-docked .oneMusic-main-menu .classy-navbar .nav-brand {
    ========================================= */
 
 :root {
-  --mobile-menu-logo: url("img/core-img/logo.png");
+  --mobile-menu-logo: url("images/longlogomerge1.png");
 }
 
 .breakpoint-on .classy-navbar .classy-menu::before {
