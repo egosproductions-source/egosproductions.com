@@ -1818,13 +1818,11 @@ font-family: "Exo", sans-serif;
     color: #fff;
 }
 
-.egos-contact-card:hover .egos-contact-icon {
-    transform: translateY(-5px);
-    box-shadow:
-        0 0 10px rgba(255, 255, 255, 0.5),
-        0 0 25px rgba(255, 255, 255, 0.2);
+.egos-contact-icon:hover {
+    background: #fff;
+    color: #000;
+    transform: translateY(-3px);
 }
-
 .egos-contact-card h5 {
     color: #fff;
     margin-bottom: 15px;
@@ -1832,6 +1830,24 @@ font-family: "Exo", sans-serif;
 
 .egos-contact-card p {
     margin: 0;
+}
+/* Keep contact card text white */
+.egos-contact-card,
+.egos-contact-card h5,
+.egos-contact-card p,
+.egos-contact-card p a {
+    color: #fff;
+}
+
+/* Keep the main circular icons white */
+a.egos-contact-icon,
+a.egos-contact-icon:visited {
+    color: #fff;
+}
+
+/* Preserve the dark text only while hovering over a circle */
+a.egos-contact-icon:hover {
+    color: #000;
 }
 
 
