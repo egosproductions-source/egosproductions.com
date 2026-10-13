@@ -1466,7 +1466,7 @@ font-family: "Exo", sans-serif;
    HERO LOGO
    ========================================= */
 
-.hero-image-main {
+.hero-logo-image {
     display: block;
 
     width: auto;
@@ -1508,7 +1508,7 @@ font-family: "Exo", sans-serif;
     padding: 0;
 }
 
-.hero-logo-effect {
+.hero-logo-image {
     width: 100%;
     display: flex;
     justify-content: center;
