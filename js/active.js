@@ -576,29 +576,16 @@ function shareEGos(event) {
     }
 }
 
+
 (function () {
-    var selectors = [
-        '.hero-image-main',
-        '.egos-page-title-image',
-        '.egos-internal-hero-content h2',
-        '.egos-internal-hero'
-    ];
+    const logo = document.querySelector('.hero-image-main, .egos-page-title-image');
+    if (!logo) return;
 
-    var target = null;
-    for (var i = 0; i < selectors.length && !target; i++) {
-        target = document.querySelector(selectors[i]);
-    }
-    if (!target) { return; }
-
-    document.body.classList.add('header-ready');
-
-    function update() {
-        var r = target.getBoundingClientRect();
-        // Docked once the title's bottom edge is above the viewport top
-        document.body.classList.toggle('header-docked', r.bottom < 60);
+    function updateHeaderLogo() {
+        document.body.classList.toggle('header-docked', window.scrollY > 100);
     }
 
-    window.addEventListener('scroll', update, { passive: true });
-    window.addEventListener('resize', update);
-    update();
+    window.addEventListener('scroll', updateHeaderLogo, { passive: true });
+    updateHeaderLogo();
 })();
+```
