@@ -1236,6 +1236,7 @@ font-family: "Exo", sans-serif;
 /* MOBILE */ 
 @media only screen and (max-width: 767px) { 
           .egos-image-grid-section { padding: 70px 0; }
+}
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              .egos-image-grid { grid-template-columns: 1fr; gap: 20px; }
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              .egos-image-grid-heading h2 { font-size: 30px; } }
 
@@ -1598,7 +1599,6 @@ font-family: "Exo", sans-serif;
     }
 
 }
-```
 
 .youtube-container {
     position: relative;
@@ -2097,6 +2097,7 @@ body.header-docked .header-area .nav-brand {
     background-position: center center !important;
     background-size: cover;
     background-repeat: no-repeat;
+}
 
   
 /* =========================================
