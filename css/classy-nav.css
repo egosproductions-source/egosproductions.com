@@ -607,6 +607,28 @@ body.header-docked .oneMusic-main-menu .classy-navbar .nav-brand {
     pointer-events: auto !important;
 }
 
+/* =========================================
+   MOBILE MENU LOGO
+   Logo image at the top of the slide-out menu.
+   Change the path below to your logo file.
+   ========================================= */
+
+:root {
+  --mobile-menu-logo: url("img/core-img/logo.png");
+}
+
+.breakpoint-on .classy-navbar .classy-menu::before {
+  content: "";
+  display: block;
+  height: 90px;
+  margin: 0 60px 0 20px;
+  background: var(--mobile-menu-logo) left center / contain no-repeat;
+}
+
+.breakpoint-on .classynav {
+  padding-top: 10px;
+}
+
 /* Fallback Responsive CSS */
 
 /*# sourceMappingURL=classy-nav.css.map */
