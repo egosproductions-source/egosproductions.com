@@ -493,7 +493,7 @@ img {
     .dark.classy-nav-container a:hover, .dark.classy-nav-container a:focus {
       color: #ffffff; }
 .dark .classynav ul li .dropdown {
-  background-color: #192a56; }
+  background-color: #fff; }
 .dark .classynav ul li .megamenu {
   background-color: #192a56; }
 .dark .classynav ul li .megamenu .single-mega.cn-col-5,
