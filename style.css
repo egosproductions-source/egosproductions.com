@@ -2256,28 +2256,19 @@ page title glow
     }
 }
 
-/* Header logo: hidden until scrolling */
-.hero-image-main,
-.egos-page-title-image {
-    transition: opacity 0.4s ease, transform 0.4s ease;
-}
-
-body:not(.header-docked) .egos-page-title-image,
-body:not(.header-docked) .hero-image-main {
-    opacity: 1;
-}
-
-body.header-docked .egos-page-title-image,
-body.header-docked .hero-image-main {
+/* Navigation logo: appear only after scrolling */
+.nav-brand {
     opacity: 0;
+    visibility: hidden;
     pointer-events: none;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
 }
 
-body.header-docked .header-logo {
+body.header-docked .nav-brand {
     opacity: 1;
     visibility: visible;
+    pointer-events: auto;
 }
-
 
   
 /* Contact section background positioning */
