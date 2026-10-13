@@ -319,6 +319,25 @@ page title glow
     }
 }
 
+    /* Make this one hero title larger — adjust sizes to taste */
+.egos-page-title-image .hero-title-larger {
+  font-size: 80px;    /* desired desktop size */
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+/* Keep it responsive */
+@media (max-width: 991px) {
+  .egos-internal-hero-content .hero-title-larger {
+    font-size: 48px;
+  }
+}
+@media (max-width: 767px) {
+  .egos-internal-hero-content .hero-title-larger {
+    font-size: 32px;
+  }
+}
 
 /* =========================================
    SECTION HEADING
@@ -782,6 +801,7 @@ page title glow
         </div>
 
         <div class="egos-internal-hero-content">
+            <class="hero-title-larger">
             <img src="images/pagetitle (3).png" alt="Performance" class="egos-page-title-image">
         </div>
 
