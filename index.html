@@ -399,6 +399,22 @@
 <script src="js/plugins/plugins.js"></script>
 <script src="js/active.js"></script>
 <script src="js/header-logo.js"></script>
+    <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var arrow = document.getElementById('hero-arrow');
+    if (!arrow) return;
+    arrow.addEventListener('click', function (e) {
+      // scroll to the first content section under the hero
+      var target = document.querySelector('.featured-artist-area, .egos-media-section, #about');
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        // fallback: scroll down one viewport
+        window.scrollBy({ top: window.innerHeight * 0.9, behavior: 'smooth' });
+      }
+    });
+  });
+</script>
 
 </body>
 </html>
