@@ -1440,8 +1440,7 @@ font-family: "Exo", sans-serif;
     .single-hero-slide.page-hero-small {
         height: 300px;
     }
-}
-```css
+
 /* =========================================
    E-GOS HERO LOGO — GLOWING ENTRANCE
    ========================================= */
@@ -2270,7 +2269,7 @@ body.header-docked .header-area .oneMusic-main-menu .nav-brand {
 
 /* raise the hero logo up (adjust value as needed) */
 .hero-logo-container {
-  transform: translateY(-8vh);
+  transform: translateY(-12vh);
   /* preserve any existing transforms by chaining */
   will-change: transform;
 }
@@ -2278,7 +2277,7 @@ body.header-docked .header-area .oneMusic-main-menu .nav-brand {
 /* reduce the offset on small screens */
 @media (max-width: 767px) {
   .hero-logo-container {
-    transform: translateY(-4vh);
+    transform: translateY(-8vh);
   }
 }
 
