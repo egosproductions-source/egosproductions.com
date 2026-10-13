@@ -2222,3 +2222,39 @@ display: flex;
 align-items: center;
 }
 }
+
+/* Mobile only: logo and copyright side by side */
+@media (max-width: 767px) {
+
+    .footer-area .col-12.col-md-6:first-child {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .footer-area .footer-logo {
+        flex: 0 0 auto;
+        margin: 0;
+    }
+
+    .footer-area .footer-logo img {
+        max-width: 150px;
+        height: auto;
+        display: block;
+    }
+
+    .footer-area .copywrite-text {
+        flex: 1;
+        min-width: 0;
+        margin: 0;
+        font-size: 10px !important;
+        line-height: 1.4;
+    }
+
+/* Mobile: add space above the About section */
+@media (max-width: 767px) {
+    .featured-artist-content .section-heading {
+        margin-top: 30px;
+    }
+}
+
