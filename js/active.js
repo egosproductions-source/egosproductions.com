@@ -576,16 +576,15 @@ function shareEGos(event) {
     }
 }
 
-
 (function () {
-    const logo = document.querySelector('.hero-image-main, .egos-page-title-image');
-    if (!logo) return;
-
     function updateHeaderLogo() {
-        document.body.classList.toggle('header-docked', window.scrollY > 100);
+        document.body.classList.toggle(
+            'header-docked',
+            window.scrollY > 100
+        );
     }
 
     window.addEventListener('scroll', updateHeaderLogo, { passive: true });
+    window.addEventListener('load', updateHeaderLogo);
     updateHeaderLogo();
 })();
-```
