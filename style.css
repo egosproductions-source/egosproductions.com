@@ -1440,7 +1440,7 @@ font-family: "Exo", sans-serif;
     .single-hero-slide.page-hero-small {
         height: 300px;
     }
-
+}
 /* =========================================
    E-GOS HERO LOGO — GLOWING ENTRANCE
    ========================================= */
@@ -2351,43 +2351,44 @@ body.header-docked .header-area .oneMusic-main-menu .nav-brand {
     }
 }
 
-/* arrow: visible, centered and clickable */
+/* scroll arrow: sits at the bottom of the first screen, scrolls away with the page */
 .arrow {
-  position: fixed;
-  bottom: 18px;
+  position: absolute;
+  bottom: 24px;
   left: 50%;
   transform: translateX(-50%);
   width: 40px;
   height: 40px;
-  z-index: 9999; /* make sure it's above overlays */
-  background-image: url("data:image/svg+xml;utf8,<?xml version='1.0' encoding='utf-8'?><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='%23FFFFFF' d='M293.751 455.868c-20.181 20.179-53.165 19.913-73.673-.595l0 0c-20.508-20.508-20.773-53.493-.594-73.672l189.999-190c20.178-20.178 53.164-19.913 73.672.595l0 0c20.508 20.509 20.772 53.492.595 73.671L293.751 455.868z'/></svg>");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  z-index: 10;
+  background: none;
   cursor: pointer;
-  pointer-events: auto;
-  background-color: transparent;
 }
-
-/* plain-css keyframes (replaces the SCSS/Compass mixin) */
+ 
+/* chevron drawn in CSS (no image needed) */
+.arrow::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  border-right: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+  transform: translateX(-50%) rotate(45deg);
+  filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.5));
+}
+ 
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
-  40% { transform: translateX(-50%) translateY(-20px); }
-  60% { transform: translateX(-50%) translateY(-10px); }
+  40% { transform: translateX(-50%) translateY(-16px); }
+  60% { transform: translateX(-50%) translateY(-8px); }
 }
-
-/* attach animation */
+ 
 .bounce {
   animation: bounce 2s infinite;
 }
-
-/* responsive tweaks */
+ 
 @media (max-width: 767px) {
-  .arrow { bottom: 12px; width: 36px; height: 36px; }
-  @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
-    40% { transform: translateX(-50%) translateY(-12px); }
-    60% { transform: translateX(-50%) translateY(-6px); }
-  }
+  .arrow { bottom: 18px; }
 }
-
+ 
