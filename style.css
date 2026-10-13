@@ -2287,3 +2287,13 @@ body.header-docked .header-area {
     z-index: 9999;
     background: rgba(0, 0, 0, 0.85);
 }
+
+
+  
+/* Contact section background positioning */
+#contact {
+    background-position: center center !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
