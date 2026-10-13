@@ -2297,3 +2297,10 @@ body.header-docked .header-area {
     background-repeat: no-repeat;
 }
 
+   .egos-page-title-image {
+    display: block;
+    width: 240px;
+    height: auto;
+    margin: 32px auto;
+    max-width: 100%;
+
