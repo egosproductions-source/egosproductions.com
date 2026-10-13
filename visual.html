@@ -366,6 +366,121 @@
 
         }
 
+        
+/* =========================================
+   CLICKABLE GALLERY IMAGES
+   ========================================= */
+
+.egos-visual-grid-item {
+    cursor: pointer;
+}
+
+/* Lightbox background */
+.egos-lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    background: rgba(0, 0, 0, 0.94);
+    align-items: center;
+    justify-content: center;
+    padding: 55px 20px 25px;
+    box-sizing: border-box;
+}
+
+.egos-lightbox.is-open {
+    display: flex;
+}
+
+/* Popup content */
+.egos-lightbox-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    max-width: 1200px;
+    gap: 14px;
+}
+
+/* Enlarged image */
+.egos-lightbox-image {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: calc(100vh - 180px);
+    object-fit: contain;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.08);
+}
+
+/* Title and medium information */
+.egos-lightbox-caption {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-family: 'Exo', sans-serif;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.egos-lightbox-title {
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 0 0 5px;
+    color: #fff;
+}
+
+.egos-lightbox-medium {
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Close button */
+.egos-lightbox-close {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    z-index: 2;
+    border: none;
+    background: transparent;
+    color: #fff;
+    font-size: 34px;
+    line-height: 1;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.egos-lightbox-close:hover {
+    opacity: 0.6;
+}
+
+/* Mobile adjustments */
+@media (max-width: 767px) {
+    .egos-lightbox {
+        padding: 55px 12px 20px;
+    }
+
+    .egos-lightbox-image {
+        max-width: 100%;
+        max-height: calc(100vh - 190px);
+    }
+
+    .egos-lightbox-title {
+        font-size: 17px;
+    }
+
+    .egos-lightbox-medium {
+        font-size: 13px;
+    }
+}
+
     </style>
 
 </head>
@@ -537,7 +652,15 @@
 
       <div class="egos-visual-grid">
 
-    <div class="egos-visual-grid-item"><img src="images/gvisual (1).JPG" alt="e-Gos visual artwork" loading="lazy"></div>
+<div class="egos-visual-grid-item">
+    <img
+        src="images/gvisual (1).JPG"
+        alt="Abstract mixed-media artwork"
+        data-title="Fragments of Becoming"
+        data-medium="Acrylic, collage, and found materials"
+        loading="lazy">
+</div>
+
     <div class="egos-visual-grid-item"><img src="images/gvisual (2).JPG" alt="e-Gos visual artwork" loading="lazy"></div>
     <div class="egos-visual-grid-item"><img src="images/gvisual (3).JPG" alt="e-Gos visual artwork" loading="lazy"></div>
     <div class="egos-visual-grid-item"><img src="images/gvisual (4).JPG" alt="e-Gos visual artwork" loading="lazy"></div>
@@ -572,6 +695,44 @@
         </div>
 
     </section>
+
+<!-- ARTWORK LIGHTBOX -->
+<div
+    class="egos-lightbox"
+    id="egos-lightbox"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Artwork viewer"
+    aria-hidden="true">
+
+    <div class="egos-lightbox-content">
+
+        <button
+            type="button"
+            class="egos-lightbox-close"
+            id="egos-lightbox-close"
+            aria-label="Close artwork viewer">
+            &times;
+        </button>
+
+        <img
+            class="egos-lightbox-image"
+            id="egos-lightbox-image"
+            src=""
+            alt="">
+
+        <div class="egos-lightbox-caption">
+            <h3
+                class="egos-lightbox-title"
+                id="egos-lightbox-title"></h3>
+
+            <p
+                class="egos-lightbox-medium"
+                id="egos-lightbox-medium"></p>
+        </div>
+
+    </div>
+</div>
 
 
      <!-- ##### Contact Area Start ##### -->
