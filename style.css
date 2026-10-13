@@ -1494,6 +1494,37 @@ font-family: "Exo", sans-serif;
 
 
 /* =========================================
+   CENTERED HERO LOGO
+   ========================================= */
+
+.hero-logo-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.hero-logo-effect {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+/* Smaller screens */
+@media (max-width: 767px) {
+    .hero-logo-image {
+        max-width: 90%;
+    }
+}
+
+
+/* =========================================
    UPWARD ENTRANCE
    ========================================= */
 
