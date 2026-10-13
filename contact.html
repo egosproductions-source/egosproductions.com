@@ -1,66 +1,37 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
-    <meta name="description"
-        content="e-Gos Productions — video, visual art, performance, music, and experimental work.">
-
+    <meta name="description" content="e-Gos Productions — video, visual art, performance, music, and experimental work.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title>e-GoS — Contact</title>
 
-
-    <!-- Favicon -->
     <link rel="icon" href="img/core-img/favicon.ico">
-
-
-    <!-- Main Stylesheet -->
     <link rel="stylesheet" href="style.css">
 
-
-    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <style>
-
-        /* =========================================
-           PAGE
-           ========================================= */
-
         .contact-page {
             margin: 0;
             padding: 0;
         }
 
-
-   /* =========================================
-           INTERNAL HERO
-           ========================================= */
-
+        /* PAGE HERO */
         .egos-internal-hero {
             position: relative;
             width: 100%;
             height: 320px;
             overflow: hidden;
-
             display: flex;
             align-items: center;
             justify-content: center;
-
             margin: 0;
             padding: 0;
         }
@@ -68,432 +39,268 @@
         .egos-internal-hero-bg {
             position: absolute;
             inset: 0;
-
-            width: 100%;
-            height: 100%;
-
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
-
             z-index: 0;
         }
 
         .egos-internal-hero::after {
             content: "";
-
             position: absolute;
             inset: 0;
-
             background: rgba(0, 0, 0, 0.25);
-
             z-index: 1;
         }
 
         .egos-internal-hero-content {
             position: relative;
             z-index: 2;
-
             width: 100%;
-
             text-align: center;
         }
 
-        .egos-internal-hero-content h2 {
+        .egos-page-title-image {
+            display: block;
+            width: 240px;
+            height: auto;
+            max-width: 100%;
+            margin: 0 auto;
+            filter:
+                drop-shadow(0 0 6px rgba(255,255,255,0.9))
+                drop-shadow(0 0 16px rgba(255,255,255,0.75))
+                drop-shadow(0 0 36px rgba(255,255,255,0.5));
+            animation: eGosTitleGlow 3s ease-in-out infinite;
+        }
+
+        @keyframes eGosTitleGlow {
+            0%, 100% {
+                filter:
+                    drop-shadow(0 0 6px rgba(255,255,255,0.9))
+                    drop-shadow(0 0 16px rgba(255,255,255,0.75))
+                    drop-shadow(0 0 36px rgba(255,255,255,0.5));
+            }
+            50% {
+                filter:
+                    drop-shadow(0 0 10px rgba(255,255,255,1))
+                    drop-shadow(0 0 26px rgba(255,255,255,0.9))
+                    drop-shadow(0 0 55px rgba(255,255,255,0.65));
+            }
+        }
+
+        /* SHARED CONTACT + BOOKING BACKGROUND */
+        .egos-contact-featured {
             position: relative;
-
-            display: inline-block;
-
-            margin: 0;
-
-            color: #fff;
-
-            font-size: 60px;
-            line-height: 1;
-            font-weight: 700;
-
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .egos-internal-hero-content h2 span {
-            position: absolute;
-
-            left: 50%;
-            top: 0;
-
-            transform: translateX(-50%);
-
             width: 100%;
-
-            color: transparent;
-
-            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.25);
-
-            z-index: -1;
+            padding: 75px 0;
+            margin: 0;
+            overflow: hidden;
+            background-image: url('images/bgoption.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
-        /* =========================================
-           CONTACT INFORMATION
-           ========================================= */
 
+        .egos-contact-featured::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.35);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .egos-contact-featured > .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* CONTACT CARDS */
         .egos-contact-links {
             margin-top: 35px;
         }
 
-
         .egos-contact-card {
             height: 100%;
-
             padding: 35px 20px;
-
             text-align: center;
-
             background: rgba(0,0,0,0.55);
-
             border: 1px solid rgba(255,255,255,0.15);
-
             box-sizing: border-box;
         }
 
-
         .egos-contact-icon {
             margin-bottom: 15px;
-
             font-size: 30px;
-
             color: #fff;
         }
-
 
         .egos-contact-card h5 {
             margin: 0 0 12px;
-
             color: #fff;
-
             font-size: 20px;
-
             font-weight: 600;
         }
 
-
         .egos-contact-card p {
             margin: 0;
-
             color: rgba(255,255,255,0.8);
-
             font-size: 14px;
-
             line-height: 1.6;
+            overflow-wrap: anywhere;
         }
-
 
         .egos-contact-card a {
             color: #fff;
-
             text-decoration: none;
-
             transition: opacity 0.3s ease;
         }
 
-
         .egos-contact-card a:hover {
             opacity: 0.65;
-
-            text-decoration: none;
         }
 
-
-        /* =========================================
-           SOCIAL ICONS
-           ========================================= */
-
+        /* SOCIAL ICONS */
         .egos-social-horizontal {
             display: flex;
-
             align-items: center;
             justify-content: center;
-
+            flex-wrap: wrap;
             gap: 18px;
-
             margin-top: 15px;
         }
-
 
         .egos-social-horizontal a {
             width: 42px;
             height: 42px;
-
             display: flex;
-
             align-items: center;
             justify-content: center;
-
             border: 1px solid rgba(255,255,255,0.5);
-
             border-radius: 50%;
-
             color: #fff;
-
             font-size: 18px;
-
-            transition:
-                background 0.3s ease,
-                color 0.3s ease,
-                transform 0.3s ease;
+            transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
         }
-
 
         .egos-social-horizontal a:hover {
             background: #fff;
-
             color: #000;
-
             transform: translateY(-3px);
         }
 
-
-        /* =========================================
-           BOOKING SECTION
-           ========================================= */
-
+        /* BOOKING FORM */
         .egos-booking-section {
             width: 100%;
-
-            padding: 75px 0;
-
+            padding: 75px 0 0;
             margin: 0;
-
             background: transparent;
         }
-
 
         .egos-booking-section .section-heading {
             margin-bottom: 35px;
         }
 
-
         .egos-booking-section .section-heading h2 {
             color: #fff;
         }
 
-
         .egos-booking-section .contact-form-area {
             max-width: 1000px;
-
             margin: 0 auto;
         }
-
 
         .egos-booking-section .form-group {
             margin-bottom: 20px;
         }
 
-
         .egos-booking-section .form-control {
             min-height: 50px;
-
             color: #fff;
-
             background: rgba(255,255,255,0.06);
-
             border: 1px solid rgba(255,255,255,0.2);
-
             border-radius: 0;
         }
-
 
         .egos-booking-section textarea.form-control {
             min-height: 180px;
         }
 
-
         .egos-booking-section .form-control::placeholder {
-            color: rgba(255,255,255,0.55);
+            color: rgba(255,255,255,0.7);
         }
-
 
         .egos-booking-section .form-control:focus {
             color: #fff;
-
             background: rgba(255,255,255,0.08);
-
             border-color: rgba(255,255,255,0.65);
-
             box-shadow: none;
         }
 
-
-        /* =========================================
-           BOOK BUTTON
-           ========================================= */
-
         .egos-book-button {
             display: inline-block;
-
             margin-top: 10px;
-
             padding: 12px 30px;
-
             border: 1px solid rgba(255,255,255,0.8);
-
             color: #fff;
-
             background: transparent;
-
             text-decoration: none;
-
             text-transform: uppercase;
-
             letter-spacing: 1px;
-
             font-size: 13px;
-
             transition: all 0.3s ease;
         }
 
-
         .egos-book-button:hover {
             color: #000;
-
             background: #fff;
-
             text-decoration: none;
         }
 
-        /* =========================================
-   CONTACT FEATURED BACKGROUND
-   ========================================= */
-
-.egos-contact-featured {
-    position: relative;
-    width: 100%;
-    padding: 75px 0;
-    margin: 0;
-    overflow: hidden;
-
-    background-image: url('images/bgoption.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.egos-contact-featured::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.35);
-    z-index: 0;
-}
-
-.egos-contact-featured > .container {
-    position: relative;
-    z-index: 1;
-}
-         /* =========================================
-page title glow
-   ========================================= */
-  .egos-page-title-image {
-    display: block;
-    width: 240px;
-    height: auto;
-    margin: 0 auto;
-    max-width: 100%;
-
-    filter:
-        drop-shadow(0 0 6px rgba(255,255,255,0.9))
-        drop-shadow(0 0 16px rgba(255,255,255,0.75))
-        drop-shadow(0 0 36px rgba(255,255,255,0.5));
-
-    animation: eGosTitleGlow 3s ease-in-out 0s infinite;
-}
-  
-@keyframes eGosTitleGlow {
-    0%, 100% {
-        filter:
-            drop-shadow(0 0 6px rgba(255,255,255,0.9))
-            drop-shadow(0 0 16px rgba(255,255,255,0.75))
-            drop-shadow(0 0 36px rgba(255,255,255,0.5));
-    }
-    50% {
-        filter:
-            drop-shadow(0 0 10px rgba(255,255,255,1))
-            drop-shadow(0 0 26px rgba(255,255,255,0.9))
-            drop-shadow(0 0 55px rgba(255,255,255,0.65));
-    }
-}
-
-
-        /* =========================================
-           MOBILE
-           ========================================= */
-
         @media (max-width: 767px) {
-
             .egos-internal-hero {
                 height: 240px;
             }
 
-
-            .egos-internal-hero-content h2 {
-                font-size: 42px;
-            }
-
-    
             .egos-contact-links {
                 margin-top: 20px;
             }
-
 
             .egos-contact-card {
                 margin-bottom: 15px;
             }
 
-
             .egos-booking-section {
-                padding: 50px 0;
+                padding-top: 50px;
             }
-
         }
-
     </style>
 </head>
 
-
 <body class="contact-page">
 
-
-    <!-- =========================================
-         PRELOADER
-         ========================================= -->
-
+    <!-- PRELOADER -->
     <div class="preloader d-flex align-items-center justify-content-center">
-
         <div class="lds-ellipsis">
-
             <div></div>
             <div></div>
             <div></div>
             <div></div>
-
         </div>
-
     </div>
 
-  <!-- ##### Header Area Start ##### -->
+    <!-- HEADER -->
     <header class="header-area">
-
         <div class="oneMusic-main-menu">
             <div class="classy-nav-container breakpoint-off">
-
                 <div class="container">
 
                     <nav class="classy-navbar justify-content-between" id="oneMusicNav" aria-label="Main navigation">
 
-                         <!-- Nav brand -->
-                        <a href="index.html" class="nav-brand"><img src="images/Logo.png" alt="e-Gos"></a>
+                        <a href="index.html" class="nav-brand">
+                            <img src="images/Logo.png" alt="e-Gos">
+                        </a>
 
-
-                        <!-- Navbar Toggler -->
                         <div class="classy-navbar-toggler">
                             <span class="navbarToggler">
                                 <span></span>
@@ -502,10 +309,8 @@ page title glow
                             </span>
                         </div>
 
-                        <!-- Menu -->
                         <div class="classy-menu">
 
-                            <!-- Close Button -->
                             <div class="classycloseIcon">
                                 <div class="cross-wrap">
                                     <span class="top"></span>
@@ -513,73 +318,32 @@ page title glow
                                 </div>
                             </div>
 
-                            <!-- Nav Start -->
                             <div class="classynav">
                                 <ul>
-            
-                                    <li>
-                                        <a href="index.html">Home</a>
-                                    </li>
-
-                                     <li>
-                                        <a href="audio.html">Audio</a>
-                                    </li>
-                                     <li>
-                                        <a href="video.html">Video</a>
-                                    </li>
-                                     <li>
-                                        <a href="visual.html">Visual</a>
-                                    </li>
-                                     <li>
-                                        <a href="performance.html">Performance </a>
-                                    </li>
-                                    <li>
-                                        <a href="event.html">Events</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="contact.html">Contact</a>
-                                    </li>
-
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="audio.html">Audio</a></li>
+                                    <li><a href="video.html">Video</a></li>
+                                    <li><a href="visual.html">Visual</a></li>
+                                    <li><a href="performance.html">Performance</a></li>
+                                    <li><a href="event.html">Events</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
                                 </ul>
 
-                             <!-- SOCIAL BUTTONS -->
-            <div class="header-social-links">
-
-                <a
-                    href="https://www.instagram.com/egos.creative/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Instagram">
-                    <i class="fa fa-instagram"></i>
-                </a>
-
-                <a
-                    href="https://open.spotify.com/artist/7BO0dsRrLZgyIqVinsUjnA"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Spotify">
-                    <i class="fa fa-spotify"></i>
-                </a>
-
-                <a
-                    href="https://soundcloud.com/e-gosss"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="SoundCloud">
-                    <i class="fa fa-soundcloud"></i>
-                </a>
-
-                <a
-                    href="https://www.youtube.com/@e-GosProductions"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="YouTube">
-                    <i class="fa fa-youtube"></i>
-                </a>
-
+                                <div class="header-social-links">
+                                    <a href="https://www.instagram.com/egos.creative/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                                        <i class="fa fa-instagram"></i>
+                                    </a>
+                                    <a href="https://open.spotify.com/artist/7BO0dsRrLZgyIqVinsUjnA" target="_blank" rel="noopener noreferrer" aria-label="Spotify">
+                                        <i class="fa fa-spotify"></i>
+                                    </a>
+                                    <a href="https://soundcloud.com/e-gosss" target="_blank" rel="noopener noreferrer" aria-label="SoundCloud">
+                                        <i class="fa fa-soundcloud"></i>
+                                    </a>
+                                    <a href="https://www.youtube.com/@e-GosProductions" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                                        <i class="fa fa-youtube"></i>
+                                    </a>
+                                </div>
                             </div>
-                            <!-- Nav End -->
 
                         </div>
                     </nav>
@@ -587,162 +351,180 @@ page title glow
                 </div>
             </div>
         </div>
-
     </header>
-    <!-- ##### Header Area End ##### -->
 
-
-    <!-- =========================================
-         CONTACT HERO
-         ========================================= -->
-
-   <section class="egos-internal-hero">
-
-        <div
-            class="egos-internal-hero-bg"
-            style="background-image: url('images/g2header.jpg');">
-        </div>
+    <!-- CONTACT HERO -->
+    <section class="egos-internal-hero">
+        <div class="egos-internal-hero-bg" style="background-image: url('images/g2header.jpg');"></div>
 
         <div class="egos-internal-hero-content">
             <img src="images/pagetitle (1).png" alt="Contact" class="egos-page-title-image">
         </div>
-
     </section>
 
-<!-- =========================================
-     CONTACT + BOOKING — SHARED BACKGROUND
-     ========================================= -->
-
-<section
-    class="egos-contact-featured"
-    style="background-image: url('images/bgoption.jpg');
-           background-size: cover;
-           background-position: center;
-           background-repeat: no-repeat;">
-
-    <!-- CONTACT CARDS
-
-    <!-- =========================================
-         FOOTER
-         ========================================= -->
-
-    <footer class="footer-area">
+    <!-- CONTACT CARDS + BOOKING FORM: ONE SHARED BACKGROUND -->
+    <section class="egos-contact-featured">
 
         <div class="container">
 
-            <div class="row d-flex flex-wrap align-items-center">
+            <!-- CONTACT CARDS -->
+            <div class="row egos-contact-links">
 
-
-                <!-- LOGO + COPYRIGHT -->
-
-                <div class="col-12 col-md-6">
-
-                    <a
-                        href="index.html"
-                        class="footer-logo">
-
-                        <img
-                            src="images/longlogomerge1.png"
-                            alt="e-Gos Productions">
-
-                    </a>
-
-
-                    <p
-                        class="copywrite-text"
-                        style="font-size: 12px;">
-
-                        Copyright &copy;
-
-                        <script>
-                            document.write(new Date().getFullYear());
-                        </script>
-
-                        e-GoS Productions
-
-                    </p>
-
+                <div class="col-12 col-md-4">
+                    <div class="egos-contact-card">
+                        <div class="egos-contact-icon">
+                            <i class="fa fa-envelope-o"></i>
+                        </div>
+                        <h5>Book</h5>
+                        <p>
+                            For bookings and inquiries, email
+                            <a href="mailto:booking@egosproductions.com">booking@egosproductions.com</a>
+                        </p>
+                    </div>
                 </div>
 
+                <div class="col-12 col-md-4">
+                    <div class="egos-contact-card">
+                        <div class="egos-contact-icon">
+                            <i class="fa fa-share-alt"></i>
+                        </div>
+                        <h5>Connect</h5>
+                        <p>Find e-Gos Productions online.</p>
 
-                <!-- FOOTER NAVIGATION -->
+                        <div class="egos-social-horizontal">
+                            <a href="https://www.instagram.com/egos.creative/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                            <a href="https://open.spotify.com/artist/7BO0dsRrLZgyIqVinsUjnA" target="_blank" rel="noopener noreferrer" aria-label="Spotify">
+                                <i class="fa fa-spotify"></i>
+                            </a>
+                            <a href="https://soundcloud.com/e-gosss" target="_blank" rel="noopener noreferrer" aria-label="SoundCloud">
+                                <i class="fa fa-soundcloud"></i>
+                            </a>
+                            <a href="https://www.youtube.com/@e-GosProductions" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                                <i class="fa fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-                <div class="col-12 col-md-6">
-
-                    <nav class="footer-nav">
-
-                        <ul>
-
-                            <li>
-                                <a href="index.html">
-                                    Home
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="audio.html">
-                                    Audio
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="video.html">
-                                    Video
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="visual.html">
-                                    Visual
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="performance.html">
-                                    Performance
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="event.html">
-                                    Events
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="contact.html">
-                                    Contact
-                                </a>
-                            </li>
-
-                        </ul>
-
-                    </nav>
-
+                <div class="col-12 col-md-4">
+                    <div class="egos-contact-card">
+                        <div class="egos-contact-icon">
+                            <i class="fa fa-headphones"></i>
+                        </div>
+                        <h5>Listen</h5>
+                        <p>
+                            Explore our music on
+                            <a href="https://open.spotify.com/artist/7BO0dsRrLZgyIqVinsUjnA" target="_blank" rel="noopener noreferrer">Spotify</a>.
+                        </p>
+                    </div>
                 </div>
 
             </div>
 
-        </div>
+            <!-- BOOKING FORM -->
+            <section class="egos-booking-section" id="booking">
 
+                <div class="section-heading white text-center">
+                    <h2>Book e-Gos</h2>
+                    <p style="color: rgba(255,255,255,0.8);">
+                        Tell us a little about your project, event, or collaboration.
+                    </p>
+                </div>
+
+                <div class="contact-form-area">
+
+                    <!-- This mailto form opens the visitor's email app.
+                         Replace with your form service if you have one. -->
+                    <form action="mailto:booking@egosproductions.com" method="post" enctype="text/plain">
+
+                        <div class="row">
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" name="Name" class="form-control" placeholder="Your Name" required>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="email" name="Email" class="form-control" placeholder="Your Email" required>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" name="Organization" class="form-control" placeholder="Organization (optional)">
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" name="Inquiry Type" class="form-control" placeholder="Booking, collaboration, or other inquiry">
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <textarea name="Message" class="form-control" placeholder="Tell us about your project..." required></textarea>
+                                </div>
+                            </div>
+
+                            <div class="col-12 text-center">
+                                <button type="submit" class="egos-book-button">Send Inquiry</button>
+                            </div>
+
+                        </div>
+
+                    </form>
+                </div>
+            </section>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer-area">
+        <div class="container">
+            <div class="row d-flex flex-wrap align-items-center">
+
+                <div class="col-12 col-md-6">
+                    <a href="index.html" class="footer-logo">
+                        <img src="images/longlogomerge1.png" alt="e-Gos Productions">
+                    </a>
+
+                    <p class="copywrite-text" style="font-size: 12px;">
+                        Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script>
+                        e-GoS Productions
+                    </p>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <nav class="footer-nav">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="audio.html">Audio</a></li>
+                            <li><a href="video.html">Video</a></li>
+                            <li><a href="visual.html">Visual</a></li>
+                            <li><a href="performance.html">Performance</a></li>
+                            <li><a href="event.html">Events</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+            </div>
+        </div>
     </footer>
 
-
-    <!-- =========================================
-         JAVASCRIPT
-         ========================================= -->
-
+    <!-- JAVASCRIPT -->
     <script src="js/jquery/jquery-2.2.4.min.js"></script>
-
     <script src="js/bootstrap/popper.min.js"></script>
-
     <script src="js/bootstrap/bootstrap.min.js"></script>
-
     <script src="js/plugins/plugins.js"></script>
-
     <script src="js/active.js"></script>
 
-
 </body>
-
 </html>
