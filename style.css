@@ -2230,7 +2230,7 @@ page title glow
     display: block;
     width: 240px;
     height: auto;
-    margin: 0 auto;
+    margin: 32px auto;
     max-width: 100%;
 
     filter:
@@ -2276,12 +2276,4 @@ body.header-docked .nav-brand {
     background-position: center center !important;
     background-size: cover;
     background-repeat: no-repeat;
-}
-
-   .egos-page-title-image {
-    display: block;
-    width: 240px;
-    height: auto;
-    margin: 32px auto;
-    max-width: 100%;
 
