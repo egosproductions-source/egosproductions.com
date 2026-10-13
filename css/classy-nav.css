@@ -589,6 +589,24 @@ img {
   gap: 10px; /* Optional: Adds spacing between elements */
 }
 
+/* =========================================
+   e-GOS NAV LOGO: SHOW AFTER SCROLLING
+   ========================================= */
+
+.oneMusic-main-menu .classy-navbar .nav-brand {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    transition: opacity 0.4s ease, visibility 0.4s ease !important;
+}
+
+/* Reveal the navigation logo after scrolling */
+body.header-docked .oneMusic-main-menu .classy-navbar .nav-brand {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+}
+
 /* Fallback Responsive CSS */
 
 /*# sourceMappingURL=classy-nav.css.map */
