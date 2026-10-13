@@ -834,91 +834,116 @@
     </div>
 
 </section>
+<footer class="footer-area">
 
-    <footer class="footer-area">
+    <div class="container">
 
-        <div class="main-footer-area">
+        <div class="row d-flex flex-wrap align-items-center">
 
-            <div class="container">
+            <!-- LOGO + COPYRIGHT -->
+            <div class="col-12 col-md-6">
 
-                <div class="row align-items-center">
+                <a href="index.html" class="footer-logo">
+                    <img
+                        src="images/longlogomerge1.png"
+                        alt="e-Gos Productions">
+                </a>
 
-                    <div class="col-12 col-lg-4">
+                <p class="copywrite-text" style="font-size: 12px;">
 
-                        <a href="index.html" class="footer-logo">
+                    Copyright &copy;
 
-                            <img
-                                src="images/longlogomerge1.png"
-                                alt="e-GoS Productions">
+                    <script>
+                        document.write(new Date().getFullYear());
+                    </script>
+                    e-GoS Productions
+                </p>
 
-                        </a>
+            </div>
 
-                    </div>
 
-                    <div class="col-12 col-lg-8">
+            <!-- FOOTER NAVIGATION -->
+            <div class="col-12 col-md-6">
 
-                        <p
-                            class="copywrite-text"
-                            style="font-size: 12px;">
+                <nav class="footer-nav">
 
-                            Copyright &copy;
-                            <script>
-                                document.write(new Date().getFullYear());
-                            </script>
+                    <ul>
 
-                        </p>
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
 
-                        <nav class="footer-nav">
+                        <li>
+                            <a href="audio.html">Audio</a>
+                        </li>
 
-                            <ul>
+                        <li>
+                            <a href="video.html">Video</a>
+                        </li>
 
-                                <li>
-                                    <a href="index.html">Home</a>
-                                </li>
+                        <li>
+                            <a href="visual.html">Visual</a>
+                        </li>
 
-                                <li>
-                                    <a href="audio.html">Audio</a>
-                                </li>
+                        <li>
+                            <a href="performance.html">Performance</a>
+                        </li>
 
-                                <li>
-                                    <a href="video.html">Video</a>
-                                </li>
+                        <li>
+                            <a href="event.html">Events</a>
+                        </li>
 
-                                <li>
-                                    <a href="visual.html">Visual</a>
-                                </li>
+                        <li>
+                            <a href="contact.html">Contact</a>
+                        </li>
 
-                                <li>
-                                    <a href="performance.html">Performance</a>
-                                </li>
+                    </ul>
 
-                                <li>
-                                    <a href="event.html">Events</a>
-                                </li>
-
-                                <li>
-                                    <a href="contact.html">Contact</a>
-                                </li>
-
-                            </ul>
-
-                        </nav>
-
-                    </div>
-
-                </div>
+                </nav>
 
             </div>
 
         </div>
 
-    </footer>
+    </div>
+
+</footer>
+
+<!-- ##### Footer Area End ##### -->
+
+    <!-- =========================================
+         JAVASCRIPT
+         ========================================= -->
 
     <script src="js/jquery/jquery-2.2.4.min.js"></script>
+
     <script src="js/bootstrap/popper.min.js"></script>
+
     <script src="js/bootstrap/bootstrap.min.js"></script>
+
     <script src="js/plugins/plugins.js"></script>
+
     <script src="js/active.js"></script>
-</body>
+<!-- WEB POPUP -->
+<div class="modal" id="web-modal">
+    <div class="modal-panel">
+        <button class="modal-close" id="close-web" aria-label="Close">✕</button>
+
+        <iframe
+            src="network-viewer.html"
+            title="Interactive Network">
+        </iframe>
+    </div>
+</div>
+
+
+<!-- ##### All Javascript Script ##### -->
+
+<script src="js/jquery/jquery-2.2.4.min.js"></script>
+<script src="js/bootstrap/popper.min.js"></script>
+<script src="js/bootstrap/bootstrap.min.js"></script>
+<script src="js/plugins/plugins.js"></script>
+<script src="js/active.js"></script>
+<script src="js/header-logo.js"></script>
 
 </html>
