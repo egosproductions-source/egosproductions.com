@@ -1787,146 +1787,10 @@ font-family: "Exo", sans-serif;
     padding: 0 !important;
 }
 
-/* =========================================
-   CONTACT PAGE
-   ========================================= */
-
-.egos-contact-intro {
-    padding: 90px 0 70px;
-}
-
-.egos-contact-layout {
-    display: flex;
-    align-items: center;
-    gap: 60px;
-}
-
-.egos-contact-info {
-    flex: 1;
-}
-
-.egos-contact-image {
-    flex: 1;
-}
-
-.egos-contact-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-
-/* Contact headings */
-
-.egos-contact-info .contact-title {
-    margin-bottom: 20px;
-}
-
-.egos-contact-info .contact-title h5 {
-    margin-bottom: 0;
-}
-
-
-/* Individual contact information */
-
-.egos-contact-info .single-contact-info {
-    margin-bottom: 20px;
-}
-
-.egos-contact-info .single-contact-info p {
-    margin: 0;
-}
-
 
 /* =========================================
-   SOCIAL LINKS — HORIZONTAL
+   CONTACT CARDS
    ========================================= */
-
-.egos-social-links {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-    flex-wrap: wrap;
-    margin-top: 10px;
-}
-
-.egos-social-links a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 48px;
-    height: 48px;
-
-    border: 1px solid rgba(255,255,255,0.35);
-    border-radius: 50%;
-
-    color: #fff;
-
-    transition: all 0.3s ease;
-}
-
-.egos-social-links a:hover {
-    transform: translateY(-4px);
-    box-shadow:
-        0 0 10px rgba(255,255,255,0.5),
-        0 0 25px rgba(255,255,255,0.25);
-
-    border-color: #fff;
-    color: #fff;
-}
-
-.egos-social-links i {
-    font-size: 18px;
-}
-
-
-/* =========================================
-   BOOKING FORM
-   ========================================= */
-
-.egos-booking-section {
-    padding: 70px 0 100px;
-}
-
-.egos-booking-section .section-heading {
-    margin-bottom: 50px;
-}
-
-
-/* =========================================
-   MOBILE
-   ========================================= */
-
-@media (max-width: 767px) {
-
-    .egos-contact-intro {
-        padding: 60px 0 50px;
-    }
-
-    .egos-contact-layout {
-        flex-direction: column;
-        gap: 40px;
-    }
-
-    .egos-contact-info,
-    .egos-contact-image {
-        width: 100%;
-    }
-
-    .egos-social-links {
-        gap: 15px;
-    }
-
-}
-
-.footer-area .footer-nav ul li a {
-    white-space: nowrap !important;
-}
-
-
-
-/* CONTACT CARDS */
 
 .egos-contact-links {
     margin-top: 50px;
@@ -1940,16 +1804,12 @@ font-family: "Exo", sans-serif;
 .egos-contact-icon {
     width: 55px;
     height: 55px;
-
     margin: 0 auto 20px;
-
-    border: 1px solid rgba(255,255,255,0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 50%;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     transition: all 0.3s ease;
 }
 
@@ -1960,10 +1820,9 @@ font-family: "Exo", sans-serif;
 
 .egos-contact-card:hover .egos-contact-icon {
     transform: translateY(-5px);
-
     box-shadow:
-        0 0 10px rgba(255,255,255,0.5),
-        0 0 25px rgba(255,255,255,0.2);
+        0 0 10px rgba(255, 255, 255, 0.5),
+        0 0 25px rgba(255, 255, 255, 0.2);
 }
 
 .egos-contact-card h5 {
@@ -1973,7 +1832,6 @@ font-family: "Exo", sans-serif;
 
 .egos-contact-card p {
     margin: 0;
-}
 }
 
 
@@ -1986,31 +1844,25 @@ font-family: "Exo", sans-serif;
     justify-content: center;
     align-items: center;
     gap: 18px;
+    flex-wrap: wrap;
 }
 
 .egos-social-horizontal a {
     width: 38px;
     height: 38px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
-    border: 1px solid rgba(255,255,255,0.25);
+    border: 1px solid rgba(255, 255, 255, 0.25);
     border-radius: 50%;
-
     color: #fff;
-
     transition: all 0.3s ease;
 }
 
 .egos-social-horizontal a:hover {
     transform: translateY(-3px);
-
     color: #fff;
-
-    box-shadow:
-        0 0 10px rgba(255,255,255,0.5);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 
@@ -2024,10 +1876,185 @@ font-family: "Exo", sans-serif;
 
 
 /* =========================================
-   MOBILE
+   PAGE TITLE IMAGE — GLOW
    ========================================= */
 
-@media (max-width: 767px) {
+.egos-page-title-image {
+    display: block;
+    width: 240px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+
+    filter:
+        drop-shadow(0 0 6px rgba(255, 255, 255, 0.9))
+        drop-shadow(0 0 16px rgba(255, 255, 255, 0.75))
+        drop-shadow(0 0 36px rgba(255, 255, 255, 0.5));
+
+    animation: eGosTitleGlow 3s ease-in-out infinite;
+}
+
+@keyframes eGosTitleGlow {
+    0%, 100% {
+        filter:
+            drop-shadow(0 0 6px rgba(255, 255, 255, 0.9))
+            drop-shadow(0 0 16px rgba(255, 255, 255, 0.75))
+            drop-shadow(0 0 36px rgba(255, 255, 255, 0.5));
+    }
+
+    50% {
+        filter:
+            drop-shadow(0 0 10px rgba(255, 255, 255, 1))
+            drop-shadow(0 0 26px rgba(255, 255, 255, 0.9))
+            drop-shadow(0 0 55px rgba(255, 255, 255, 0.65));
+    }
+}
+
+
+/* =========================================
+   SCROLLING HEADER LOGO
+   ========================================= */
+
+/* Hide the small header logo before scrolling */
+.header-area .oneMusic-main-menu .nav-brand {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+/* Reveal the logo after scrolling */
+body.header-docked .header-area .oneMusic-main-menu .nav-brand {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+}
+
+
+/* =========================================
+   INTERNAL PAGE HERO
+   ========================================= */
+
+.egos-internal-hero {
+    position: relative;
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.egos-internal-hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+.egos-internal-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.25);
+    z-index: 1;
+}
+
+.egos-internal-hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.egos-internal-hero-content h2 {
+    position: relative;
+    margin: 0;
+    color: #fff;
+    font-size: 60px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.egos-internal-hero-content h2 span {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 100%;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.25);
+    z-index: -1;
+}
+
+
+/* =========================================
+   CONTACT BACKGROUND
+   ========================================= */
+
+#contact {
+    background-position: center center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+
+
+/* =========================================
+   MOBILE STYLES
+   ========================================= */
+
+@media only screen and (max-width: 767px) {
+
+    /* Internal page hero */
+    .egos-internal-hero {
+        height: 260px;
+    }
+
+    .egos-internal-hero-content h2 {
+        font-size: 34px;
+        letter-spacing: 1px;
+    }
+
+    .egos-page-title-image {
+        width: 200px;
+    }
+
+    /* Contact section background */
+    .contact-area {
+        min-height: 550px;
+        background-size: cover !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+        display: flex;
+        align-items: center;
+    }
+
+    /* Contact layout */
+    .egos-contact-intro {
+        padding: 60px 0 50px;
+    }
+
+    .egos-contact-layout {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .egos-contact-info,
+    .egos-contact-image {
+        width: 100%;
+        flex: 0 0 100%;
+    }
+
+    .egos-contact-image img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
 
     .egos-contact-featured {
         padding: 60px 0;
@@ -2035,6 +2062,7 @@ font-family: "Exo", sans-serif;
 
     .egos-contact-featured-image img {
         height: 300px;
+        object-fit: cover;
     }
 
     .egos-contact-featured-overlay {
@@ -2045,188 +2073,11 @@ font-family: "Exo", sans-serif;
         padding: 25px 10px;
     }
 
-  /* =========================================
-page title glow
-   ========================================= */
-  .egos-page-title-image {
-    display: block;
-    width: 240px;
-    height: auto;
-    margin: 32px auto;
-    max-width: 100%;
-
-    filter:
-        drop-shadow(0 0 6px rgba(255,255,255,0.9))
-        drop-shadow(0 0 16px rgba(255,255,255,0.75))
-        drop-shadow(0 0 36px rgba(255,255,255,0.5));
-
-    animation: eGosTitleGlow 3s ease-in-out 0s infinite;
-}
-  
-@keyframes eGosTitleGlow {
-    0%, 100% {
-        filter:
-            drop-shadow(0 0 6px rgba(255,255,255,0.9))
-            drop-shadow(0 0 16px rgba(255,255,255,0.75))
-            drop-shadow(0 0 36px rgba(255,255,255,0.5));
+    .egos-social-links {
+        gap: 15px;
     }
-    50% {
-        filter:
-            drop-shadow(0 0 10px rgba(255,255,255,1))
-            drop-shadow(0 0 26px rgba(255,255,255,0.9))
-            drop-shadow(0 0 55px rgba(255,255,255,0.65));
-    }
-}
 
-/* Hide navigation logo before scrolling */
-.header-area .nav-brand {
-    opacity: 0 !important;
-    visibility: hidden !important;
-    pointer-events: none;
-    transition: opacity 0.4s ease, visibility 0.4s ease;
-}
-
-/* Reveal navigation logo after scrolling */
-body.header-docked .header-area .nav-brand {
-    opacity: 1 !important;
-    visibility: visible !important;
-    pointer-events: auto;
-}
-/* Contact section background positioning */
-#contact {
-    background-position: center center !important;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-  
-/* =========================================
-   SCROLLING HEADER LOGO
-   ========================================= */
-
-/* Hide the small navigation logo initially */
-.header-area .oneMusic-main-menu .nav-brand {
-    opacity: 0 !important;
-    visibility: hidden !important;
-    pointer-events: none !important;
-    transition: opacity 0.4s ease, visibility 0.4s ease;
-}
-
-/* Show it once the page has been scrolled */
-body.header-docked .header-area .oneMusic-main-menu .nav-brand {
-    opacity: 1 !important;
-    visibility: visible !important;
-    pointer-events: auto !important;
-}
-
-  .egos-internal-hero {
-            position: relative;
-            width: 100%;
-            height: 320px;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0;
-        }
-
-        .egos-internal-hero-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            width: 100%;
-            height: 100%;
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-            z-index: 0;
-        }
-
-        .egos-internal-hero::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.25);
-            z-index: 1;
-        }
-
-        .egos-internal-hero-content {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-        }
-
-        .egos-internal-hero-content h2 {
-            position: relative;
-            margin: 0;
-            color: #ffffff;
-            font-size: 60px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .egos-internal-hero-content h2 span {
-            position: absolute;
-            left: 50%;
-            top: 0;
-            transform: translateX(-50%);
-            width: 100%;
-            color: transparent;
-            -webkit-text-stroke: 1px rgba(255,255,255,0.25);
-            z-index: -1;
-        }
-
-     .egos-page-title-image {
-    display: block;
-    width: 240px;
-    height: auto;
-    margin: 0 auto;
-    max-width: 100%;
-
-    filter:
-        drop-shadow(0 0 4px rgba(255,255,255,0.65))
-        drop-shadow(0 0 12px rgba(255,255,255,0.45))
-        drop-shadow(0 0 24px rgba(255,255,255,0.25));
-
-    animation: eGosLogoGlow 3s ease-in-out 0s infinite;
-}
-
-        @keyframes eGosTitleGlow {
-    0%, 100% {
-        filter:
-            drop-shadow(0 0 6px rgba(255,255,255,0.9))
-            drop-shadow(0 0 20px rgba(255,255,255,0.75))
-            drop-shadow(0 0 40px rgba(255,255,255,0.5));
-    }
-    50% {
-        filter:
-            drop-shadow(0 0 10px rgba(255,255,255,1))
-            drop-shadow(0 0 26px rgba(255,255,255,0.9))
-            drop-shadow(0 0 55px rgba(255,255,255,0.65));
-    }
-}
-
-  /* CONTACT AREA — MOBILE IMAGE */
-@media (max-width: 767px) {
-.contact-area {
-min-height: 550px;
-background-size: cover;
-background-position: center center;
-background-repeat: no-repeat;
-display: flex;
-align-items: center;
-}
-}
-
-/* Mobile only: logo and copyright side by side */
-@media (max-width: 767px) {
-
+    /* Footer logo and copyright */
     .footer-area .col-12.col-md-6:first-child {
         display: flex;
         align-items: center;
@@ -2239,9 +2090,10 @@ align-items: center;
     }
 
     .footer-area .footer-logo img {
-        max-width: 150px;
-        height: auto;
         display: block;
+        width: auto;
+        max-width: 125px;
+        height: auto;
     }
 
     .footer-area .copywrite-text {
@@ -2252,18 +2104,35 @@ align-items: center;
         line-height: 1.4;
     }
 
-  @media (max-width: 767px) {
+    /* Footer navigation */
+    .footer-area .footer-nav ul {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: center !important;
+        flex-wrap: wrap !important;
+        white-space: normal !important;
+        gap: 4px !important;
+        margin-top: 20px !important;
+    }
+
+    .footer-area .footer-nav ul li {
+        flex: 0 0 auto !important;
+    }
+
+    .footer-area .footer-nav ul li a {
+        height: 32px;
+        padding: 0 7px;
+        font-size: 11px;
+        white-space: nowrap !important;
+    }
+
+    /* Featured artist */
     .featured-artist-content {
         padding-top: 30px;
     }
-}
 
-/* =========================================
-   MOBILE HERO LOGO
-   ========================================= */
-
-@media (max-width: 767px) {
-
+    /* Main hero logo */
     .hero-area .container {
         padding-top: 90px !important;
     }
@@ -2273,14 +2142,13 @@ align-items: center;
     }
 
     .hero-logo-image {
-        width: 120% !important;
-        max-width: 120% !important;
+        width: 100% !important;
+        max-width: 100% !important;
         height: auto;
     }
 
     .hero-image-effect {
         width: 100%;
     }
-
 }
 
