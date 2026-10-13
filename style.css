@@ -2210,3 +2210,15 @@ body.header-docked .header-area .oneMusic-main-menu .nav-brand {
             drop-shadow(0 0 55px rgba(255,255,255,0.65));
     }
 }
+
+  /* CONTACT AREA — MOBILE IMAGE */
+@media (max-width: 767px) {
+.contact-area {
+min-height: 550px;
+background-size: cover;
+background-position: center center;
+background-repeat: no-repeat;
+display: flex;
+align-items: center;
+}
+}
