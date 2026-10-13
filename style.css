@@ -2256,21 +2256,20 @@ page title glow
     }
 }
 
-/* Navigation logo: appear only after scrolling */
-.nav-brand {
-    opacity: 0;
-    visibility: hidden;
+/* Hide navigation logo before scrolling */
+.header-area .nav-brand {
+    opacity: 0 !important;
+    visibility: hidden !important;
     pointer-events: none;
     transition: opacity 0.4s ease, visibility 0.4s ease;
 }
 
-body.header-docked .nav-brand {
-    opacity: 1;
-    visibility: visible;
+/* Reveal navigation logo after scrolling */
+body.header-docked .header-area .nav-brand {
+    opacity: 1 !important;
+    visibility: visible !important;
     pointer-events: auto;
 }
-
-  
 /* Contact section background positioning */
 #contact {
     background-position: center center !important;
