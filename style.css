@@ -2258,3 +2258,29 @@ align-items: center;
     }
 }
 
+/* =========================================
+   MOBILE HERO LOGO
+   ========================================= */
+
+@media (max-width: 767px) {
+
+    .hero-area .container {
+        padding-top: 90px !important;
+    }
+
+    .hero-logo-container {
+        transform: translateY(-25px);
+    }
+
+    .hero-logo-image {
+        width: 120% !important;
+        max-width: 120% !important;
+        height: auto;
+    }
+
+    .hero-image-effect {
+        width: 100%;
+    }
+
+}
+
