@@ -627,150 +627,6 @@ img {
       .single-hero-slide .hero-slides-content .btn:hover, .single-hero-slide .hero-slides-content .btn:focus {
         background-color: #fff;
         color: #000000; }
-.internal-hero-slide {
-    width: 100%;
-    height: 450px;
-
-    position: relative;
-    z-index: 1;
-
-    padding: 0 30px;
-
-    overflow: hidden;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* KEEP THE SAME MOVING BACKGROUND IMAGE */
-.internal-hero-slide .slide-img {
-    position: absolute;
-
-    width: 100%;
-    height: 100%;
-
-    left: 0;
-    top: 0;
-
-    z-index: -10;
-
-    animation: slide 12s linear infinite;
-}
-
-/* DARK OVERLAY */
-.internal-hero-slide::after {
-    position: absolute;
-
-    width: 100%;
-    height: 100%;
-
-    top: 0;
-    left: 0;
-
-    z-index: -5;
-
-    background-color: rgba(0, 0, 0, 0.35);
-
-    content: '';
-}
-
-/* CENTER TEXT */
-.internal-hero-slide .hero-slides-content {
-    position: relative;
-    z-index: 2;
-
-    width: 100%;
-
-    text-align: center;
-}
-
-.internal-hero-slide .hero-slides-content h2 {
-    position: relative;
-
-    margin: 0;
-
-    color: #fff;
-
-    font-size: 60px;
-  font-family: "Exo", sans-serif;
-    font-weight: 400;
-
-    letter-spacing: 15px;
-
-    text-transform: capitalize;
-}
-
-.internal-hero-slide .hero-slides-content h2 span {
-    position: absolute;
-
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
-
-    color: rgba(255,255,255,0.15);
-
-    animation: textsonar 6s linear infinite;
-}
-
-@media only screen and (max-width: 767px) {
-
-    .internal-hero {
-        height: 300px;
-    }
-
-    .internal-hero-content h2 {
-        font-size: 36px;
-        letter-spacing: 7px;
-    }
-
-}
-@-webkit-keyframes textsonar {
-  0% {
-    -webkit-transform: scaleX(1);
-    transform: scaleX(1); }
-  50% {
-    -webkit-transform: scaleX(1.15);
-    transform: scaleX(1.15); }
-  100% {
-    -webkit-transform: scaleX(1);
-    transform: scaleX(1); } }
-@keyframes textsonar {
-  0% {
-    -webkit-transform: scaleX(1);
-    transform: scaleX(1); }
-  50% {
-    -webkit-transform: scaleX(1.15);
-    transform: scaleX(1.15); }
-  100% {
-    -webkit-transform: scaleX(1);
-    transform: scaleX(1); } }
-.single-hero-slide .slide-img {
-  -webkit-animation: slide 12s linear infinite;
-  animation: slide 12s linear infinite; }
-
-@-webkit-keyframes slide {
-  0% {
-    -webkit-transform: scale(1);
-    transform: scale(1); }
-  50% {
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2); }
-  100% {
-    -webkit-transform: scale(1);
-    transform: scale(1); } }
-@keyframes slide {
-  0% {
-    -webkit-transform: scale(1);
-    transform: scale(1); }
-  50% {
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2); }
-  100% {
-    -webkit-transform: scale(1);
-    transform: scale(1); } }
 
 /* Pulse animation with orange glow */
 @keyframes pulse {
@@ -784,72 +640,6 @@ img {
     transform: scale(0.95);
     box-shadow: 0 0 0 0 rgba(255, 140, 0, 0); } }
 
-/* :: 7.0 Events Area CSS */
-.single-event-area {
-  position: relative;
-  z-index: 1;
-  -webkit-transition-duration: 500ms;
-  transition-duration: 500ms; }
-  .single-event-area img {
-    width: 100%; }
-  .single-event-area .event-text {
-    text-align: center;
-    position: relative;
-    z-index: 1;
-    padding: 30px 15px;
-    background-color: #000;
-    -webkit-transition-duration: 500ms;
-    transition-duration: 500ms; }
-    .single-event-area .event-text h4 {
-      color: #fff;
-      text-transform: uppercase;
-      -webkit-transition-duration: 500ms;
-      transition-duration: 500ms; }
-    .single-event-area .event-text .event-meta-data {
-      position: relative;
-      margin-bottom: 30px; }
-      .single-event-area .event-text .event-meta-data a {
-        -webkit-transition-duration: 500ms;
-        transition-duration: 500ms;
-        position: relative;
-        z-index: 1;
-        color: #fff;
-        font-size: 15px;
-        font-family: "Exo", sans-serif;
-        font-weight: 400;
-        display: inline-block;
-        padding-right: 29px; }
-        .single-event-area .event-text .event-meta-data a:first-child::after {
-          position: absolute;
-          content: '|';
-          top: 0;
-          right: 12px;
-          z-index: 1; }
-        .single-event-area .event-text .event-meta-data a:last-child {
-          padding-right: 0; }
-    .single-event-area .event-text .see-more-btn {
-      font-size: 11px;
-      color: #fff;
-      text-transform: uppercase;
-      letter-spacing: 10px;
-      border-bottom: 1px solid #fff;
-      padding-left: 0;
-      padding-right: 0;
-      border-radius: 0; }
-      .single-event-area .event-text .see-more-btn:hover, .single-event-area .event-text .see-more-btn:focus {
-        font-family: "Exo", sans-serif;
-        font-weight: 400; }
-  .single-event-area:hover, .single-event-area:focus {
-    box-shadow: 0 5px 80px 0 rgba(0, 0, 0, 0.2); }
-    .single-event-area:hover .event-text, .single-event-area:focus .event-text {
-      background-color: #f5f9fa; }
-      .single-event-area:hover .event-text h4,
-      .single-event-area:hover .event-text .event-meta-data a, .single-event-area:focus .event-text h4,
-      .single-event-area:focus .event-text .event-meta-data a {
-        color: #000000; }
-      .single-event-area:hover .event-text .see-more-btn, .single-event-area:focus .event-text .see-more-btn {
-        border-bottom-color: #000000;
-        color: #000000; }
 
 /* :: 8.0 Newsletter Area CSS */
 .newsletter-area {
@@ -2297,3 +2087,95 @@ body.header-docked .header-area .oneMusic-main-menu .nav-brand {
     pointer-events: auto !important;
 }
 
+  .egos-internal-hero {
+            position: relative;
+            width: 100%;
+            height: 320px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+        }
+
+        .egos-internal-hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: 0;
+        }
+
+        .egos-internal-hero::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.25);
+            z-index: 1;
+        }
+
+        .egos-internal-hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .egos-internal-hero-content h2 {
+            position: relative;
+            margin: 0;
+            color: #ffffff;
+            font-size: 60px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .egos-internal-hero-content h2 span {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%);
+            width: 100%;
+            color: transparent;
+            -webkit-text-stroke: 1px rgba(255,255,255,0.25);
+            z-index: -1;
+        }
+
+     .egos-page-title-image {
+    display: block;
+    width: 240px;
+    height: auto;
+    margin: 0 auto;
+    max-width: 100%;
+
+    filter:
+        drop-shadow(0 0 4px rgba(255,255,255,0.65))
+        drop-shadow(0 0 12px rgba(255,255,255,0.45))
+        drop-shadow(0 0 24px rgba(255,255,255,0.25));
+
+    animation: eGosLogoGlow 3s ease-in-out 0s infinite;
+}
+
+        @keyframes eGosTitleGlow {
+    0%, 100% {
+        filter:
+            drop-shadow(0 0 6px rgba(255,255,255,0.9))
+            drop-shadow(0 0 20px rgba(255,255,255,0.75))
+            drop-shadow(0 0 40px rgba(255,255,255,0.5));
+    }
+    50% {
+        filter:
+            drop-shadow(0 0 10px rgba(255,255,255,1))
+            drop-shadow(0 0 26px rgba(255,255,255,0.9))
+            drop-shadow(0 0 55px rgba(255,255,255,0.65));
+    }
+}
