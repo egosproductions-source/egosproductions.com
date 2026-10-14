@@ -2269,7 +2269,7 @@ body.header-docked .header-area .oneMusic-main-menu .nav-brand {
 
 /* raise the hero logo up (adjust value as needed) */
 .hero-logo-container {
-  transform: translateY(-16vh);
+  transform: translateY(-18vh);
   /* preserve any existing transforms by chaining */
   will-change: transform;
 }
@@ -2277,14 +2277,14 @@ body.header-docked .header-area .oneMusic-main-menu .nav-brand {
 /* reduce the offset on small screens */
 @media (max-width: 767px) {
   .hero-logo-container {
-    transform: translateY(-8vh);
+    transform: translateY(-12vh);
   }
 }
 
 /* very short landscape screens */
 @media (max-height: 500px) {
   .hero-logo-container {
-    transform: translateY(-6vh);
+    transform: translateY(-12vh);
   }
 }
 
