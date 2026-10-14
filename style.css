@@ -2269,7 +2269,7 @@ body.header-docked .header-area .oneMusic-main-menu .nav-brand {
 
 /* raise the hero logo up (adjust value as needed) */
 .hero-logo-container {
-  transform: translateY(-18vh);
+  transform: translateY(-20vh);
   /* preserve any existing transforms by chaining */
   will-change: transform;
 }
