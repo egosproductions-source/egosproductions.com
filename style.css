@@ -2377,15 +2377,31 @@ body.header-docked .header-area .oneMusic-main-menu .nav-brand {
   transform: translateX(-50%) rotate(45deg);
   filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.5));
 }
- 
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
-  40% { transform: translateX(-50%) translateY(-16px); }
-  60% { transform: translateX(-50%) translateY(-8px); }
+
+.arrow {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.arrow.hidden {
+  opacity: 0;
+  pointer-events: none;
 }
  
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  40% {
+    transform: translateX(-50%) translateY(-6px);
+  }
+  60% {
+    transform: translateX(-50%) translateY(-3px);
+  }
+}
+
 .bounce {
-  animation: bounce 2s infinite;
+  animation: bounce 3.5s infinite;
 }
  
 @media (max-width: 767px) {
