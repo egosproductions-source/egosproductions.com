@@ -678,3 +678,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+  const arrow = document.querySelector('.arrow');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      arrow.classList.add('hidden');
+    } else {
+      arrow.classList.remove('hidden');
+    }
+  });
