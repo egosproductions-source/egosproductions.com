@@ -1904,17 +1904,22 @@ body.header-docked .header-area .oneMusic-main-menu .nav-brand {
         width: 200px;
     }
 
-    /* Contact section background */
-    .contact-area {
-        min-height: 550px;
-        background-size: cover !important;
-        background-position: center center !important;
-        background-repeat: no-repeat !important;
-        display: flex;
-        align-items: center;
+/* Contact section background — mobile positioning */
+.contact-area {
+    min-height: 550px;
+    background-size: cover !important;
+    background-position: 65% center !important;
+    background-repeat: no-repeat !important;
+    display: flex;
+    align-items: center;
+}
+  @media only screen and (max-width: 767px) {
+    #contact {
+        background-position: 65% center !important;
     }
-
-    /* Contact layout */
+}
+   
+  /* Contact layout */
     .egos-contact-intro {
         padding: 60px 0 50px;
     }
