@@ -1748,7 +1748,7 @@ font-family: "Exo", sans-serif;
 
     .footer-area .footer-nav ul {
         justify-content: center;
-        gap: 8px;
+        gap: 5px;
         margin-top: 20px !important;
     }
 
@@ -1772,7 +1772,7 @@ font-family: "Exo", sans-serif;
     flex-wrap: nowrap !important;
     white-space: nowrap !important;
 
-    gap: 8px !important;
+    gap: 5px !important;
 
     margin: 0 !important;
     padding: 0 !important;
