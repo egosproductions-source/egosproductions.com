@@ -45,23 +45,20 @@
         }
 
 
-        /* =========================================
-           INTERNAL HERO
-           ========================================= */
+        /* INTERNAL HERO */
 
-        .video-page .egos-internal-hero {
+        .egos-internal-hero {
             position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
             width: 100%;
-            height: 360px;
+            height: 320px;
             margin: 0;
-            padding: 0;
             overflow: hidden;
         }
 
-        .video-page .egos-internal-hero-bg {
+        .egos-internal-hero-bg {
             position: absolute;
             inset: 0;
             z-index: 0;
@@ -72,64 +69,49 @@
             background-repeat: no-repeat;
         }
 
-        .video-page .egos-internal-hero::after {
+        .egos-internal-hero::after {
             content: "";
             position: absolute;
             inset: 0;
             z-index: 1;
             background: rgba(0, 0, 0, 0.25);
-            pointer-events: none;
         }
 
-        .video-page .egos-internal-hero-content {
+        .egos-internal-hero-content {
             position: relative;
             z-index: 2;
-            width: 100%;
-            padding: 20px;
             text-align: center;
-            box-sizing: border-box;
         }
 
-        .video-page .egos-internal-hero img.egos-page-title-image {
+        .egos-page-title-image {
             display: block;
-            width: 360px;
-            max-width: 90vw;
-            height: auto;
-            margin: 0 auto;
-        }
-
-
-        /* =========================================
-           TITLE IMAGE GLOW
-           ========================================= */
-
-        .video-page .egos-page-title-image {
-            display: block;
+            width: 240px;
             max-width: 100%;
             height: auto;
+            margin: 0 auto;
             filter:
-                drop-shadow(0 0 6px rgba(255, 255, 255, 0.85))
-                drop-shadow(0 0 18px rgba(255, 255, 255, 0.6))
-                drop-shadow(0 0 36px rgba(255, 255, 255, 0.35));
+                drop-shadow(0 0 4px rgba(255, 255, 255, 0.65))
+                drop-shadow(0 0 12px rgba(255, 255, 255, 0.45))
+                drop-shadow(0 0 24px rgba(255, 255, 255, 0.25));
             animation: eGosTitleGlow 3s ease-in-out infinite;
         }
 
         @keyframes eGosTitleGlow {
-            0%,
-            100% {
+            0%, 100% {
                 filter:
-                    drop-shadow(0 0 5px rgba(255, 255, 255, 0.7))
-                    drop-shadow(0 0 15px rgba(255, 255, 255, 0.45))
-                    drop-shadow(0 0 28px rgba(255, 255, 255, 0.25));
+                    drop-shadow(0 0 6px rgba(255, 255, 255, 0.75))
+                    drop-shadow(0 0 16px rgba(255, 255, 255, 0.5))
+                    drop-shadow(0 0 30px rgba(255, 255, 255, 0.25));
             }
 
             50% {
                 filter:
-                    drop-shadow(0 0 9px rgba(255, 255, 255, 1))
-                    drop-shadow(0 0 24px rgba(255, 255, 255, 0.8))
-                    drop-shadow(0 0 45px rgba(255, 255, 255, 0.55));
+                    drop-shadow(0 0 9px rgba(255, 255, 255, 0.95))
+                    drop-shadow(0 0 22px rgba(255, 255, 255, 0.7))
+                    drop-shadow(0 0 40px rgba(255, 255, 255, 0.4));
             }
         }
+
 
 
         /* =========================================
@@ -191,7 +173,7 @@
         }
 
         .video-page img.egos-page-title-image[alt="Archival"] {
-            width: 240px;
+            width: 180px;
             max-width: 90vw;
             height: auto;
             margin: 0 auto;
