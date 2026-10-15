@@ -1878,9 +1878,7 @@ body.header-docked .header-area .oneMusic-main-menu .nav-brand {
 }
 
 
-/* =========================================
-   CONTACT BACKGROUND
-   ========================================= */
+
 
 #contact {
     background-position: center center !important;
@@ -1889,9 +1887,6 @@ body.header-docked .header-area .oneMusic-main-menu .nav-brand {
 }
 
 
-/* =========================================
-   MOBILE STYLES
-   ========================================= */
 
 @media only screen and (max-width: 767px) {
 
@@ -2037,10 +2032,7 @@ body.header-docked .header-area .oneMusic-main-menu .nav-brand {
     }
 }
 
-/* =========================================
-   e-GoS HOMEPAGE HERO — FULL SCREEN
-   Works with existing OneMusic HTML and CSS
-   ========================================= */
+
 
 /* Full-screen hero */
 .hero-area {
@@ -2146,7 +2138,7 @@ body.header-docked .header-area .oneMusic-main-menu .nav-brand {
 
 @media only screen and (max-width: 767px) {
     .hero-area .hero-logo-container {
-        transform: translateY(-170px) !important;
+        transform: translateY(-200px) !important;
     }
 }
 
@@ -2229,7 +2221,7 @@ body.header-docked .header-area .oneMusic-main-menu .nav-brand {
   cursor: pointer;
 }
  
-/* chevron drawn in CSS (no image needed) */
+/* chevron */
 .arrow::before {
   content: "";
   position: absolute;
@@ -2307,10 +2299,7 @@ body.header-docked .header-area .oneMusic-main-menu .nav-brand {
     }
 }
 
-/* =========================================
-   FIXED HOMEPAGE HERO LOGO POSITION
-   Paste at the VERY BOTTOM of style.css
-   ========================================= */
+
 
 /* Keep the homepage hero full-screen */
 .hero-area {
@@ -2403,7 +2392,7 @@ body.header-docked .header-area .oneMusic-main-menu .nav-brand {
     }
 
     .hero-area .hero-logo-container {
-        transform: translateY(-260px);
+        transform: translateY(-300px);
     }
 
     .hero-area .hero-logo-image {
@@ -2415,7 +2404,7 @@ body.header-docked .header-area .oneMusic-main-menu .nav-brand {
 /* Short landscape screens */
 @media only screen and (max-height: 500px) {
     .hero-area .hero-logo-container {
-        transform: translateY(-160px);
+        transform: translateY(-200px);
     }
 
     .hero-area .hero-logo-image {
