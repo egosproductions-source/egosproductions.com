@@ -2418,3 +2418,7 @@ body.header-docked .header-area .oneMusic-main-menu .nav-brand {
         max-width: 80%;
     }
 }
+
+#about {
+  scroll-margin-top: 90px;
+}
