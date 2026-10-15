@@ -2503,7 +2503,7 @@ body.header-docked .header-area .oneMusic-main-menu .nav-brand {
     justify-content: center;
 
     /* Negative = move UP; positive = move DOWN */
-    transform: translateY(-150px);
+    transform: translateY(-220px);
 }
 
 /* Preserve the glowing entrance animation */
@@ -2533,7 +2533,7 @@ body.header-docked .header-area .oneMusic-main-menu .nav-brand {
     }
 
     .hero-area .hero-logo-container {
-        transform: translateY(-80px);
+        transform: translateY(-220px);
     }
 
     .hero-area .hero-logo-image {
@@ -2545,7 +2545,7 @@ body.header-docked .header-area .oneMusic-main-menu .nav-brand {
 /* Short landscape screens */
 @media only screen and (max-height: 500px) {
     .hero-area .hero-logo-container {
-        transform: translateY(-40px);
+        transform: translateY(-100px);
     }
 
     .hero-area .hero-logo-image {
