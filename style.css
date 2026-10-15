@@ -2336,10 +2336,6 @@ body.header-docked .header-area .oneMusic-main-menu .nav-brand {
         max-width: 500px;
         max-height: 60svh;
     }
-
-    .hero-area .hero-logo-container {
-        transform: none;
-    }
 }
 
 /* Short landscape screens */
