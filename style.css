@@ -2436,3 +2436,121 @@ body.header-docked .header-area .oneMusic-main-menu .nav-brand {
         height: auto;
     }
 }
+
+/* =========================================
+   FIXED HOMEPAGE HERO LOGO POSITION
+   Paste at the VERY BOTTOM of style.css
+   ========================================= */
+
+/* Keep the homepage hero full-screen */
+.hero-area {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    height: 100svh;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Keep the background filling the hero */
+.hero-area .single-hero-slide {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Make the container fill the hero without adding top padding */
+.hero-area .container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0 30px !important;
+}
+
+/* Center the row horizontally and vertically */
+.hero-area .container > .row {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+/* Keep the logo column centered */
+.hero-area .container > .row > .col-12 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+/* CONTROL THE LOGO'S VERTICAL POSITION HERE */
+.hero-area .hero-logo-container {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Negative = move UP; positive = move DOWN */
+    transform: translateY(-150px);
+}
+
+/* Preserve the glowing entrance animation */
+.hero-area .hero-image-effect {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Logo sizing and glow remain intact */
+.hero-area .hero-logo-image {
+    display: block;
+    width: 100%;
+    max-width: 750px;
+    max-height: 72vh;
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+/* Mobile positioning */
+@media only screen and (max-width: 767px) {
+    .hero-area .container {
+        padding: 0 20px !important;
+    }
+
+    .hero-area .hero-logo-container {
+        transform: translateY(-80px);
+    }
+
+    .hero-area .hero-logo-image {
+        max-width: 500px;
+        max-height: 60svh;
+    }
+}
+
+/* Short landscape screens */
+@media only screen and (max-height: 500px) {
+    .hero-area .hero-logo-container {
+        transform: translateY(-60px);
+    }
+
+    .hero-area .hero-logo-image {
+        max-height: 65vh;
+        width: auto;
+        max-width: 80%;
+    }
+}
