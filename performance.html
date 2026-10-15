@@ -837,7 +837,51 @@ body.performance-page h3.egos-featured-title {
     -webkit-text-fill-color: #ffffff !important;
     opacity: 1 !important;
 }
+    
+/* PERFORMANCE PAGE — TITLE IMAGE CONTROLS */
+
+/* Main Performance title image */
+body.performance-page .egos-internal-hero img.egos-page-title-image {
+    width: 240px !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 0 auto !important;
+}
+
+/* Featured heading image */
+body.performance-page img.egos-page-title-image[alt="Featured"] {
+    width: 180px !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 0 auto 25px !important;
+}
+
+/* Archival heading image ONLY */
+body.performance-page img.egos-page-title-image[alt="Archival"] {
+    display: block !important;
+    width: 110px !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 0 auto 25px !important;
+}
+
+/* Mobile sizes */
+@media (max-width: 767px) {
+    body.performance-page .egos-internal-hero img.egos-page-title-image {
+        width: 180px !important;
+    }
+
+    body.performance-page img.egos-page-title-image[alt="Featured"] {
+        width: 130px !important;
+    }
+
+    body.performance-page img.egos-page-title-image[alt="Archival"] {
+        width: 85px !important;
+    }
+}
+
     </style>
+    
 
 </head>
 
