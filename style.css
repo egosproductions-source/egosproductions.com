@@ -662,92 +662,7 @@ img {
       display: block; }
 
 
-/* :: 10.0 Songs Area CSS */
-.single-song-area {
-  position: relative;
-  z-index: 1; }
-  .single-song-area .song-thumbnail {
-    position: relative;
-    z-index: 1;
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 135px;
-    flex: 0 0 135px;
-    max-width: 135px;
-    width: 135px;
-    margin-right: 50px; }
-    .single-song-area .song-thumbnail img {
-      width: 100%; }
-    @media only screen and (max-width: 767px) {
-      .single-song-area .song-thumbnail {
-        margin-right: 0;
-        -webkit-box-flex: 0;
-        -ms-flex: 0 0 100%;
-        flex: 0 0 100%;
-        max-width: 100%;
-        width: 100%; } }
-  .single-song-area .song-play-area {
-    position: relative;
-    z-index: 1;
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 calc(100% - 185px);
-    flex: 0 0 calc(100% - 185px);
-    max-width: calc(100% - 185px);
-    width: calc(100% - 185px);
-    background-color: #262626;
-    padding: 15px 30px 20px; }
-    @media only screen and (max-width: 767px) {
-      .single-song-area .song-play-area {
-        -webkit-box-flex: 0;
-        -ms-flex: 0 0 100%;
-        flex: 0 0 100%;
-        max-width: 100%;
-        width: 100%; } }
-    .single-song-area .song-play-area .song-name p {
-      color: #b8b8b8;
-      margin-bottom: 5px; }
-    .single-song-area .song-play-area .audioplayer {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: auto;
-      align-items: center;
-      border: none;
-      border-radius: 0;
-      background: transparent; }
-    .single-song-area .song-play-area .audioplayer-playing .audioplayer-playpause,
-    .single-song-area .song-play-area .audioplayer:not(.audioplayer-playing) .audioplayer-playpause:hover,
-    .single-song-area .song-play-area .audioplayer:not(.audioplayer-playing) .audioplayer-playpause {
-      background: #fff; }
-    .single-song-area .song-play-area .audioplayer-time {
-      font-size: 14px;
-      color: #fff; }
 
-.song-play-area {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  background-color: #262626;
-  padding: 15px 30px 20px;
-  border: 1px solid #363636; }
-  .song-play-area .song-name p {
-    color: #b8b8b8;
-    margin-bottom: 5px; }
-  .song-play-area .audioplayer {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: auto;
-    align-items: center;
-    border: none;
-    border-radius: 0;
-    background: transparent; }
-  .song-play-area .audioplayer-playing .audioplayer-playpause,
-  .song-play-area .audioplayer:not(.audioplayer-playing) .audioplayer-playpause:hover,
-  .song-play-area .audioplayer:not(.audioplayer-playing) .audioplayer-playpause {
-    background: #fff; }
-  .song-play-area .audioplayer-time {
-    font-size: 14px;
-    color: #fff; }
 
 .pulse-button {
   min-width: auto;
@@ -1212,11 +1127,6 @@ font-family: "Exo", sans-serif;
         }
 
 
-        /* -----------------------------------------
-           IMAGE GRID
-           ----------------------------------------- */
-
-        /* ========================================= e-GOS IMAGE GRID ========================================= */ 
 .egos-image-grid-section { width: 100%; padding: 100px 0; }
 .egos-image-grid-container { width: min(1450px, 92%); margin: 0 auto; } 
 /* SECTION HEADING */ 
@@ -1237,47 +1147,7 @@ font-family: "Exo", sans-serif;
 @media only screen and (max-width: 767px) { 
           .egos-image-grid-section { padding: 70px 0; }
 }
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             .egos-image-grid { grid-template-columns: 1fr; gap: 20px; }
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             .egos-image-grid-heading h2 { font-size: 30px; } }
-
-        /* -----------------------------------------
-           BLANK MEDIA SPACE
-           ----------------------------------------- */
-
-        .egos-empty-media {
-            min-height: 500px;
-
-            display: flex;
-
-            align-items: center;
-            justify-content: center;
-
-            border: 1px solid var(--egos-line);
-
-            background:
-                linear-gradient(
-                    135deg,
-                    rgba(255,255,255,0.025),
-                    rgba(255,255,255,0)
-                );
-        }
-
-
-        .egos-empty-media span {
-            color: rgba(255,255,255,0.25);
-
-            font-size: 12px;
-          font-family: "Exo", sans-serif;
-
-            text-transform: uppercase;
-
-            letter-spacing: 5px;
-        }
-
-
-        /* -----------------------------------------
-           SPOTIFY SECTION
-           ----------------------------------------- */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             .egos-image-grid { grid-template-columns: 1fr; gap: 20px; }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      .egos-image-grid-heading h2 { font-size: 30px; } 
 
         .egos-spotify-section {
             background: #080d19;
