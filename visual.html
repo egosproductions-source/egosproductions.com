@@ -1,81 +1,65 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
 
     <meta name="description"
         content="e-GoS Productions — visual art, photography, mixed media, and experimental visual work.">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <title>e-Gos — Visual</title>
-
+    <title>e-GoS — Visual</title>
 
     <!-- Favicon -->
     <link rel="icon" href="img/core-img/favicon.ico">
 
-
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="style.css">
 
-
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin>
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 
-
     <!-- =========================================
-         VISUAL PAGE CSS
+         VISUAL PAGE STYLES
          ========================================= -->
-
     <style>
+        /* INTERNAL HERO */
 
         .egos-internal-hero {
             position: relative;
-            width: 100%;
-            height: 320px;
-            overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
+            width: 100%;
+            height: 320px;
             margin: 0;
+            overflow: hidden;
         }
 
         .egos-internal-hero-bg {
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
+            inset: 0;
+            z-index: 0;
             width: 100%;
             height: 100%;
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
-            z-index: 0;
         }
 
         .egos-internal-hero::after {
             content: "";
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.25);
+            inset: 0;
             z-index: 1;
+            background: rgba(0, 0, 0, 0.25);
         }
 
         .egos-internal-hero-content {
@@ -84,464 +68,349 @@
             text-align: center;
         }
 
-        .egos-internal-hero-content h2 {
-            position: relative;
-            margin: 0;
-            color: #ffffff;
-            font-size: 60px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+        .egos-page-title-image {
+            display: block;
+            width: 240px;
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto;
+            filter:
+                drop-shadow(0 0 4px rgba(255, 255, 255, 0.65))
+                drop-shadow(0 0 12px rgba(255, 255, 255, 0.45))
+                drop-shadow(0 0 24px rgba(255, 255, 255, 0.25));
+            animation: eGosTitleGlow 3s ease-in-out infinite;
         }
-
-        .egos-internal-hero-content h2 span {
-            position: absolute;
-            left: 50%;
-            top: 0;
-            transform: translateX(-50%);
-            width: 100%;
-            color: transparent;
-            -webkit-text-stroke: 1px rgba(255,255,255,0.25);
-            z-index: -1;
-        }
-
-     .egos-page-title-image {
-    display: block;
-    width: 240px;
-    height: auto;
-    margin: 0 auto;
-    max-width: 100%;
-
-    filter:
-        drop-shadow(0 0 4px rgba(255,255,255,0.65))
-        drop-shadow(0 0 12px rgba(255,255,255,0.45))
-        drop-shadow(0 0 24px rgba(255,255,255,0.25));
-
-    animation: eGosLogoGlow 3s ease-in-out 0s infinite;
-}
 
         @keyframes eGosTitleGlow {
-    0%, 100% {
-        filter:
-            drop-shadow(0 0 6px rgba(255,255,255,0.9))
-            drop-shadow(0 0 20px rgba(255,255,255,0.75))
-            drop-shadow(0 0 40px rgba(255,255,255,0.5));
-    }
-    50% {
-        filter:
-            drop-shadow(0 0 10px rgba(255,255,255,1))
-            drop-shadow(0 0 26px rgba(255,255,255,0.9))
-            drop-shadow(0 0 55px rgba(255,255,255,0.65));
-    }
-}
-        .egos-video-item iframe {
-            display: block;
-            width: 100%;
-            aspect-ratio: 16 / 9;
-            border: 0;
-            margin: 0;
-        }
-
-        @media (max-width: 767px) {
-
-            .egos-internal-hero {
-                height: 240px;
+            0%, 100% {
+                filter:
+                    drop-shadow(0 0 6px rgba(255, 255, 255, 0.75))
+                    drop-shadow(0 0 16px rgba(255, 255, 255, 0.5))
+                    drop-shadow(0 0 30px rgba(255, 255, 255, 0.25));
             }
 
-            .egos-internal-hero-content h2 {
-                font-size: 42px;
+            50% {
+                filter:
+                    drop-shadow(0 0 9px rgba(255, 255, 255, 0.95))
+                    drop-shadow(0 0 22px rgba(255, 255, 255, 0.7))
+                    drop-shadow(0 0 40px rgba(255, 255, 255, 0.4));
+            }
+        }
+
+        /* GALLERY SECTION */
+
+        .egos-visual-gallery {
+            position: relative;
+            width: 100%;
+            padding: 55px 0 70px;
+            overflow: hidden;
+            background-image:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.45),
+                    rgba(0, 0, 0, 0.45)
+                ),
+                url("images/bgoption.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .egos-visual-gallery::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            background: radial-gradient(
+                ellipse at center,
+                transparent 10%,
+                rgba(0, 0, 0, 0.15) 50%,
+                rgba(0, 0, 0, 0.65) 100%
+            );
+            pointer-events: none;
+        }
+
+        .egos-media-container {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 1250px;
+            margin: 0 auto;
+            padding: 0 25px;
+            box-sizing: border-box;
+        }
+
+        /* GALLERY TITLE */
+
+        .egos-archive-heading {
+            position: relative;
+            z-index: 1;
+            margin: 0 auto 35px;
+            padding: 0 15px;
+            text-align: center;
+        }
+
+        .egos-archive-heading .egos-page-title-image {
+            width: 110px;
+        }
+
+        /* ARTWORK GRID */
+
+        .egos-visual-grid {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+            gap: 12px;
+            width: 100%;
+            margin: 20px 0 40px;
+        }
+
+        .egos-visual-grid-item {
+            position: relative;
+            aspect-ratio: 1 / 1;
+            min-width: 0;
+            overflow: hidden;
+            background: #000;
+            cursor: pointer;
+        }
+
+        .egos-visual-grid-item img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .egos-visual-grid-item:hover img {
+            transform: scale(1.05);
+        }
+
+        /* ARTWORK LIGHTBOX */
+
+        .egos-lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 99999;
+            align-items: center;
+            justify-content: center;
+            padding: 55px 20px 25px;
+            box-sizing: border-box;
+            background: rgba(0, 0, 0, 0.94);
+        }
+
+        .egos-lightbox.is-open {
+            display: flex;
+        }
+
+        .egos-lightbox-content {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            width: 100%;
+            height: 100%;
+            max-width: 1200px;
+        }
+
+        .egos-lightbox-image {
+            display: block;
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: calc(100vh - 180px);
+            object-fit: contain;
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.08);
+        }
+
+        .egos-lightbox-caption {
+            width: 100%;
+            padding: 0 10px;
+            box-sizing: border-box;
+            text-align: center;
+            color: #fff;
+            font-family: "Exo", sans-serif;
+        }
+
+        .egos-lightbox-title {
+            margin: 0 0 5px;
+            color: #fff;
+            font-size: 20px;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        .egos-lightbox-medium {
+            margin: 0;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .egos-lightbox-close {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            z-index: 2;
+            padding: 5px 10px;
+            border: none;
+            background: transparent;
+            color: #fff;
+            font-size: 34px;
+            line-height: 1;
+            cursor: pointer;
+            transition: opacity 0.2s ease;
+        }
+
+        .egos-lightbox-close:hover {
+            opacity: 0.6;
+        }
+
+        /* FOOTER LOGO
+           Keep the logo in its original left-column position.
+           Limit its size so it cannot expand unexpectedly. */
+
+        body .footer-area .footer-logo {
+            display: inline-block;
+            width: 220px;
+            max-width: 100%;
+            margin: 0;
+            padding: 0;
+            line-height: 0;
+        }
+
+        body .footer-area .footer-logo img {
+            display: block;
+            width: 100%;
+            max-width: 220px;
+            height: auto;
+            margin: 0;
+            object-fit: contain;
+        }
+
+        body .footer-area .copywrite-text {
+            margin-top: 12px;
+            font-size: 12px;
+        }
+
+        /* TABLET */
+
+        @media (max-width: 991px) {
+            .egos-archive-heading .egos-page-title-image {
+                width: 85px;
+            }
+
+            .egos-visual-grid {
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+                gap: 10px;
+            }
+
+            .egos-media-container {
+                padding-right: 20px;
+                padding-left: 20px;
+            }
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 767px) {
+            .egos-internal-hero {
+                height: 240px;
             }
 
             .egos-page-title-image {
                 width: 180px;
             }
 
-        }
-
-        /* =========================================
-           MEDIA SECTION
-           ========================================= */
-
-        .egos-media-section {
-            position: relative;
-
-            width: 100%;
-
-            padding: 70px 0;
-
-            margin: 0;
-
-            overflow: hidden;
-        }
-
-
-        /* =========================================
-           GALLERY BACKGROUND
-           ========================================= */
-
-        .egos-visual-gallery {
-            background-image:
-                linear-gradient(
-                    rgba(0,0,0,0.45),
-                    rgba(0,0,0,0.45)
-                ),
-                url('images/bgoption.jpg');
-
-            background-size: cover;
-
-            background-position: center;
-
-            background-attachment: fixed;
-        }
-
-
-        .egos-visual-gallery::before {
-            content: "";
-
-            position: absolute;
-
-            inset: 0;
-
-            background: radial-gradient(
-                ellipse at center,
-                transparent 10%,
-                rgba(0,0,0,0.15) 50%,
-                rgba(0,0,0,0.65) 100%
-            );
-
-            pointer-events: none;
-
-            z-index: 0;
-        }
-
-
-        /* =========================================
-           CONTENT CONTAINER
-           ========================================= */
-
-        .egos-media-container {
-            position: relative;
-
-            z-index: 1;
-
-            width: 100%;
-
-            max-width: 1050px;
-
-            margin: 0 auto;
-
-            padding: 0 20px;
-
-            box-sizing: border-box;
-        }
-
-
-        /* =========================================
-           SECTION HEADING
-           ========================================= */
-
-        .egos-section-heading {
-            text-align: center;
-            margin-bottom: 35px;
-        }
-
-        .egos-section-heading h2 {
-            color: #fff;
-            font-family: 'Exo', sans-serif;
-            font-size: 34px;
-            font-weight: 500;
-            letter-spacing: 2px;
-            margin-bottom: 10px;
-        }
-
-        .egos-section-heading p {
-            color: rgba(255,255,255,0.7);
-            font-family: 'Exo', sans-serif;
-            font-size: 15px;
-            margin: 0;
-        }
-
-        /* =========================================
-           FEATURE IMAGE
-           ========================================= */
-
-        .egos-visual-feature {
-            width: 100%;
-
-            margin: 0 0 25px;
-
-            overflow: hidden;
-
-            background: #000;
-        }
-
-
-        .egos-visual-feature img {
-            display: block;
-
-            width: 100%;
-
-            height: 560px;
-
-            object-fit: cover;
-
-            transition: transform 0.5s ease;
-        }
-
-
-        .egos-visual-feature:hover img {
-            transform: scale(1.02);
-        }
-
-
-       /* =========================================
-   IMAGE GRID — 5 x 5
-   ========================================= */
-
-.egos-visual-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 12px;
-    width: 100%;
-    margin-top: 20px;    /* 20px of space above */
-  margin-bottom: 40px; /* 40px of space below */
-}
-
-.egos-visual-grid-item {
-    aspect-ratio: 1 / 1;
-    overflow: hidden;
-    background: #000;
-}
-
-.egos-visual-grid-item img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.egos-visual-grid-item:hover img {
-    transform: scale(1.05);
-}
-
-        /* =========================================
-           MOBILE
-           ========================================= */
-
-        @media (max-width: 767px) {
-
-            .egos-internal-hero {
-                height: 240px;
-            }
-
-
-            .egos-internal-hero-content h2 {
-                font-size: 42px;
-            }
-
-
-            .egos-media-section {
-                padding: 55px 0;
-            }
-
-
             .egos-visual-gallery {
+                padding: 40px 0 45px;
                 background-attachment: scroll;
             }
 
-
-            .egos-visual-feature img {
-                height: 350px;
+            .egos-archive-heading {
+                margin-bottom: 25px;
             }
 
+            .egos-archive-heading .egos-page-title-image {
+                width: 65px;
+            }
 
-      .egos-visual-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 6px;
-}
+            .egos-media-container {
+                padding-right: 12px;
+                padding-left: 12px;
+            }
 
+            .egos-visual-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                gap: 6px;
+                margin-top: 15px;
+                margin-bottom: 30px;
+            }
 
-            
+            .egos-lightbox {
+                padding: 55px 12px 20px;
+            }
 
+            .egos-lightbox-image {
+                max-width: 100%;
+                max-height: calc(100vh - 190px);
+            }
+
+            .egos-lightbox-title {
+                font-size: 17px;
+            }
+
+            .egos-lightbox-medium {
+                font-size: 13px;
+            }
+
+            .egos-lightbox-close {
+                top: -38px;
+            }
+
+            /* Keep mobile footer logo at the left and at a controlled size */
+            body .footer-area .footer-logo {
+                width: 170px;
+                max-width: 100%;
+            }
+
+            body .footer-area .footer-logo img {
+                width: 100%;
+                max-width: 170px;
+            }
         }
-
-        
-/* =========================================
-   CLICKABLE GALLERY IMAGES
-   ========================================= */
-
-.egos-visual-grid-item {
-    cursor: pointer;
-}
-
-/* Lightbox background */
-.egos-lightbox {
-    display: none;
-    position: fixed;
-    inset: 0;
-    z-index: 99999;
-    background: rgba(0, 0, 0, 0.94);
-    align-items: center;
-    justify-content: center;
-    padding: 55px 20px 25px;
-    box-sizing: border-box;
-}
-
-.egos-lightbox.is-open {
-    display: flex;
-}
-
-/* Popup content */
-.egos-lightbox-content {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    max-width: 1200px;
-    gap: 14px;
-}
-
-/* Enlarged image */
-.egos-lightbox-image {
-    display: block;
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    max-height: calc(100vh - 180px);
-    object-fit: contain;
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0.08);
-}
-
-/* Title and medium information */
-.egos-lightbox-caption {
-    width: 100%;
-    text-align: center;
-    color: #fff;
-    font-family: 'Exo', sans-serif;
-    padding: 0 10px;
-    box-sizing: border-box;
-}
-
-.egos-lightbox-title {
-    font-size: 20px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    margin: 0 0 5px;
-    color: #fff;
-}
-
-.egos-lightbox-medium {
-    font-size: 14px;
-    line-height: 1.5;
-    margin: 0;
-    color: rgba(255, 255, 255, 0.7);
-}
-
-/* Close button */
-.egos-lightbox-close {
-    position: absolute;
-    top: -40px;
-    right: 0;
-    z-index: 2;
-    border: none;
-    background: transparent;
-    color: #fff;
-    font-size: 34px;
-    line-height: 1;
-    padding: 5px 10px;
-    cursor: pointer;
-    transition: opacity 0.2s ease;
-}
-
-.egos-lightbox-close:hover {
-    opacity: 0.6;
-}
-
-/* Mobile adjustments */
-@media (max-width: 767px) {
-    .egos-lightbox {
-        padding: 55px 12px 20px;
-    }
-
-    .egos-lightbox-image {
-        max-width: 100%;
-        max-height: calc(100vh - 190px);
-    }
-
-    .egos-lightbox-title {
-        font-size: 17px;
-    }
-
-    .egos-lightbox-medium {
-        font-size: 13px;
-    }
-}
-
-        /* ARCHIVAL HEADING — FORCE SMALLER IMAGE SIZE */
-.egos-archive-heading img.egos-page-title-image {
-    width: 110px !important;
-    max-width: 100%;
-    height: auto;
-}
-
-/* Tablet */
-@media (max-width: 991px) {
-    .egos-archive-heading img.egos-page-title-image {
-        width: 85px !important;
-    }
-}
-
-/* Mobile */
-@media (max-width: 767px) {
-    .egos-archive-heading img.egos-page-title-image {
-        width: 65px !important;
-    }
-}
     </style>
-
 </head>
-
 
 <body>
 
-
-    <!-- =========================================
-         PRELOADER
-         ========================================= -->
-
+    <!-- PRELOADER -->
     <div class="preloader d-flex align-items-center justify-content-center">
-
         <div class="lds-ellipsis">
-
             <div></div>
             <div></div>
             <div></div>
             <div></div>
-
         </div>
-
     </div>
 
-
-   <!-- ##### Header Area Start ##### -->
+    <!-- HEADER -->
     <header class="header-area">
-
         <div class="oneMusic-main-menu">
             <div class="classy-nav-container breakpoint-off">
-
                 <div class="container">
 
-                    <nav class="classy-navbar justify-content-between" id="oneMusicNav" aria-label="Main navigation">
+                    <nav class="classy-navbar justify-content-between"
+                        id="oneMusicNav"
+                        aria-label="Main navigation">
 
-                         <!-- Nav brand -->
-                        <a href="index.html" class="nav-brand"><img src="images/Logo.png" alt="e-Gos"></a>
+                        <a href="index.html" class="nav-brand">
+                            <img src="images/Logo.png" alt="e-GoS">
+                        </a>
 
-
-                        <!-- Navbar Toggler -->
                         <div class="classy-navbar-toggler">
                             <span class="navbarToggler">
                                 <span></span>
@@ -550,10 +419,7 @@
                             </span>
                         </div>
 
-                        <!-- Menu -->
                         <div class="classy-menu">
-
-                            <!-- Close Button -->
                             <div class="classycloseIcon">
                                 <div class="cross-wrap">
                                     <span class="top"></span>
@@ -561,327 +427,367 @@
                                 </div>
                             </div>
 
-                            <!-- Nav Start -->
                             <div class="classynav">
                                 <ul>
-            
-                                    <li>
-                                        <a href="index.html">Home</a>
-                                    </li>
-
-                                     <li>
-                                        <a href="audio.html">Audio</a>
-                                    </li>
-                                     <li>
-                                        <a href="video.html">Video</a>
-                                    </li>
-                                     <li>
-                                        <a href="visual.html">Visual</a>
-                                    </li>
-                                     <li>
-                                        <a href="performance.html">Performance </a>
-                                    </li>
-                                    <li>
-                                        <a href="event.html">Events</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="contact.html">Contact</a>
-                                    </li>
-
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="audio.html">Audio</a></li>
+                                    <li><a href="video.html">Video</a></li>
+                                    <li><a href="visual.html">Visual</a></li>
+                                    <li><a href="performance.html">Performance</a></li>
+                                    <li><a href="event.html">Events</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
                                 </ul>
 
-                             <!-- SOCIAL BUTTONS -->
-            <div class="header-social-links">
+                                <div class="header-social-links">
+                                    <a
+                                        href="https://www.instagram.com/egos.creative/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label="Instagram">
+                                        <i class="fa fa-instagram"></i>
+                                    </a>
 
-                <a
-                    href="https://www.instagram.com/egos.creative/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Instagram">
-                    <i class="fa fa-instagram"></i>
-                </a>
+                                    <a
+                                        href="https://open.spotify.com/artist/7BO0dsRrLZgyIqVinsUjnA"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label="Spotify">
+                                        <i class="fa fa-spotify"></i>
+                                    </a>
 
-                <a
-                    href="https://open.spotify.com/artist/7BO0dsRrLZgyIqVinsUjnA"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Spotify">
-                    <i class="fa fa-spotify"></i>
-                </a>
-
-                <a
-                    href="https://www.youtube.com/@e-GosProductions"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="YouTube">
-                    <i class="fa fa-youtube"></i>
-                </a>
-
+                                    <a
+                                        href="https://www.youtube.com/@e-GosProductions"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label="YouTube">
+                                        <i class="fa fa-youtube"></i>
+                                    </a>
+                                </div>
                             </div>
-                            <!-- Nav End -->
-
                         </div>
+
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- INTERNAL HERO -->
+    <section class="egos-internal-hero">
+        <div
+            class="egos-internal-hero-bg"
+            style="background-image: url('images/g9header.jpg');">
+        </div>
+
+        <div class="egos-internal-hero-content">
+            <img
+                src="images/visual.png"
+                alt="Visual"
+                class="egos-page-title-image">
+        </div>
+    </section>
+
+    <!-- VISUAL GALLERY -->
+    <section class="egos-visual-gallery">
+
+        <div class="egos-archive-heading">
+            <img
+                src="images/gallery.png"
+                alt="Gallery"
+                class="egos-page-title-image">
+        </div>
+
+        <div class="egos-media-container">
+
+            <div class="egos-visual-grid">
+
+                <div class="egos-visual-grid-item">
+                    <img
+                        src="images/gvisual (1).JPG"
+                        alt="Abstract mixed-media artwork"
+                        data-title="Test Title 1999"
+                        data-medium="Hi gabriel heres wheree medium can go and year or wtvs, 1999, teest"
+                        loading="lazy">
+                </div>
+
+                <div class="egos-visual-grid-item">
+                    <img src="images/gvisual (2).JPG" alt="e-GoS visual artwork" loading="lazy">
+                </div>
+                <div class="egos-visual-grid-item">
+                    <img src="images/gvisual (3).JPG" alt="e-GoS visual artwork" loading="lazy">
+                </div>
+                <div class="egos-visual-grid-item">
+                    <img src="images/gvisual (4).JPG" alt="e-GoS visual artwork" loading="lazy">
+                </div>
+                <div class="egos-visual-grid-item">
+                    <img src="images/gvisual (5).JPG" alt="e-GoS visual artwork" loading="lazy">
+                </div>
+
+                <div class="egos-visual-grid-item">
+                    <img src="images/gvisual (6).JPG" alt="e-GoS visual artwork" loading="lazy">
+                </div>
+                <div class="egos-visual-grid-item">
+                    <img src="images/gvisual (7).JPG" alt="e-GoS visual artwork" loading="lazy">
+                </div>
+                <div class="egos-visual-grid-item">
+                    <img src="images/gvisual (8).JPG" alt="e-GoS visual artwork" loading="lazy">
+                </div>
+                <div class="egos-visual-grid-item">
+                    <img src="images/gvisual (9).JPG" alt="e-GoS visual artwork" loading="lazy">
+                </div>
+                <div class="egos-visual-grid-item">
+                    <img src="images/gvisual (10).JPG" alt="e-GoS visual artwork" loading="lazy">
+                </div>
+
+                <div class="egos-visual-grid-item">
+                    <img src="images/gvisual (11).JPG" alt="e-GoS visual artwork" loading="lazy">
+                </div>
+                <div class="egos-visual-grid-item">
+                    <img src="images/gvisual (12).JPG" alt="e-GoS visual artwork" loading="lazy">
+                </div>
+                <div class="egos-visual-grid-item">
+                    <img src="images/gvisual (13).JPG" alt="e-GoS visual artwork" loading="lazy">
+                </div>
+                <div class="egos-visual-grid-item">
+                    <img src="images/gvisual (14).JPG" alt="e-GoS visual artwork" loading="lazy">
+                </div>
+                <div class="egos-visual-grid-item">
+                    <img src="images/gvisual (15).JPG" alt="e-GoS visual artwork" loading="lazy">
+                </div>
+
+                <div class="egos-visual-grid-item">
+                    <img src="images/gvisual (16).JPG" alt="e-GoS visual artwork" loading="lazy">
+                </div>
+                <div class="egos-visual-grid-item">
+                    <img src="images/gvisual (17).JPG" alt="e-GoS visual artwork" loading="lazy">
+                </div>
+                <div class="egos-visual-grid-item">
+                    <img src="images/gvisual (18).JPG" alt="e-GoS visual artwork" loading="lazy">
+                </div>
+                <div class="egos-visual-grid-item">
+                    <img src="images/gvisual (19).JPG" alt="e-GoS visual artwork" loading="lazy">
+                </div>
+                <div class="egos-visual-grid-item">
+                    <img src="images/gvisual (20).JPG" alt="e-GoS visual artwork" loading="lazy">
+                </div>
+
+                <div class="egos-visual-grid-item">
+                    <img src="images/gvisual (21).JPG" alt="e-GoS visual artwork" loading="lazy">
+                </div>
+                <div class="egos-visual-grid-item">
+                    <img src="images/gvisual (22).JPG" alt="e-GoS visual artwork" loading="lazy">
+                </div>
+                <div class="egos-visual-grid-item">
+                    <img src="images/gvisual (23).JPG" alt="e-GoS visual artwork" loading="lazy">
+                </div>
+                <div class="egos-visual-grid-item">
+                    <img src="images/gvisual (24).JPG" alt="e-GoS visual artwork" loading="lazy">
+                </div>
+                <div class="egos-visual-grid-item">
+                    <img src="images/gvisual (25).JPG" alt="e-GoS visual artwork" loading="lazy">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ARTWORK LIGHTBOX -->
+    <div
+        class="egos-lightbox"
+        id="egos-lightbox"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Artwork viewer"
+        aria-hidden="true">
+
+        <div class="egos-lightbox-content">
+
+            <button
+                type="button"
+                class="egos-lightbox-close"
+                id="egos-lightbox-close"
+                aria-label="Close artwork viewer">
+                &times;
+            </button>
+
+            <img
+                class="egos-lightbox-image"
+                id="egos-lightbox-image"
+                src=""
+                alt="">
+
+            <div class="egos-lightbox-caption">
+                <h3 class="egos-lightbox-title" id="egos-lightbox-title"></h3>
+                <p class="egos-lightbox-medium" id="egos-lightbox-medium"></p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- CONTACT SECTION -->
+    <section
+        id="contact"
+        class="contact-area section-padding-100 bg-img bg-overlay bg-fixed has-bg-img"
+        style="background-image: url('images/g7testlong.jpg');">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+
+                    <div
+                        class="section-heading white wow fadeInUp"
+                        data-wow-delay="100ms">
+
+                        <h2>Get in touch</h2>
+
+                        <a
+                            href="contact.html"
+                            class="btn oneMusic-btn mt-30 wow fadeInUp"
+                            data-wow-delay="300ms">
+                            Contact
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer-area">
+        <div class="container">
+
+            <div class="row d-flex flex-wrap align-items-center">
+
+                <!-- LOGO + COPYRIGHT: LEFT COLUMN -->
+                <div class="col-12 col-md-6">
+
+                    <a href="index.html" class="footer-logo">
+                        <img
+                            src="images/longlogomerge1.png"
+                            alt="e-GoS Productions">
+                    </a>
+
+                    <p class="copywrite-text">
+                        Copyright &copy;
+                        <script>
+                            document.write(new Date().getFullYear());
+                        </script>
+                        e-GoS Productions
+                    </p>
+
+                </div>
+
+                <!-- FOOTER NAVIGATION: RIGHT COLUMN -->
+                <div class="col-12 col-md-6">
+
+                    <nav class="footer-nav" aria-label="Footer navigation">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="audio.html">Audio</a></li>
+                            <li><a href="video.html">Video</a></li>
+                            <li><a href="visual.html">Visual</a></li>
+                            <li><a href="performance.html">Performance</a></li>
+                            <li><a href="event.html">Events</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
                     </nav>
 
                 </div>
             </div>
         </div>
+    </footer>
 
-    </header>
-    <!-- ##### Header Area End ##### -->
-    <!-- =========================================
-         INTERNAL HERO
-         ========================================= -->
+    <!-- WEB POPUP -->
+    <div class="modal" id="web-modal">
+        <div class="modal-panel">
+            <button
+                class="modal-close"
+                id="close-web"
+                aria-label="Close">
+                ✕
+            </button>
 
-    <section class="egos-internal-hero">
-
-     <div
-            class="egos-internal-hero-bg"
-            style="background-image: url('images/g9header.jpg');">
+            <iframe
+                src="network-viewer.html"
+                title="Interactive Network">
+            </iframe>
         </div>
-
-
-        <div class="egos-internal-hero-content">
-            <img src="images/visual.png" alt="Visual" class="egos-page-title-image">
-        </div>
-
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================================
-         VISUAL GALLERY
-         ========================================= -->
-<section>
-    <div class="egos-archive-heading">
-        <img src="images/gallery.png"
-             alt="Gallery"
-             class="egos-page-title-image">
     </div>
 
-      <div class="egos-visual-grid">
-
-<div class="egos-visual-grid-item">
-    <img
-        src="images/gvisual (1).JPG"
-        alt="Abstract mixed-media artwork"
-        data-title="Test Title 1999"
-        data-medium="Hi gabriel heres wheree medium can go and year or wtvs, 1999, teest"
-        loading="lazy">
-</div>
-
-    <div class="egos-visual-grid-item"><img src="images/gvisual (2).JPG" alt="e-Gos visual artwork" loading="lazy"></div>
-    <div class="egos-visual-grid-item"><img src="images/gvisual (3).JPG" alt="e-Gos visual artwork" loading="lazy"></div>
-    <div class="egos-visual-grid-item"><img src="images/gvisual (4).JPG" alt="e-Gos visual artwork" loading="lazy"></div>
-    <div class="egos-visual-grid-item"><img src="images/gvisual (5).JPG" alt="e-Gos visual artwork" loading="lazy"></div>
-
-    <div class="egos-visual-grid-item"><img src="images/gvisual (6).JPG" alt="e-Gos visual artwork" loading="lazy"></div>
-    <div class="egos-visual-grid-item"><img src="images/gvisual (7).JPG" alt="e-Gos visual artwork" loading="lazy"></div>
-    <div class="egos-visual-grid-item"><img src="images/gvisual (8).JPG" alt="e-Gos visual artwork" loading="lazy"></div>
-    <div class="egos-visual-grid-item"><img src="images/gvisual (9).JPG" alt="e-Gos visual artwork" loading="lazy"></div>
-    <div class="egos-visual-grid-item"><img src="images/gvisual (10).JPG" alt="e-Gos visual artwork" loading="lazy"></div>
-
-    <div class="egos-visual-grid-item"><img src="images/gvisual (11).JPG" alt="e-Gos visual artwork" loading="lazy"></div>
-    <div class="egos-visual-grid-item"><img src="images/gvisual (12).JPG" alt="e-Gos visual artwork" loading="lazy"></div>
-    <div class="egos-visual-grid-item"><img src="images/gvisual (13).JPG" alt="e-Gos visual artwork" loading="lazy"></div>
-    <div class="egos-visual-grid-item"><img src="images/gvisual (14).JPG" alt="e-Gos visual artwork" loading="lazy"></div>
-    <div class="egos-visual-grid-item"><img src="images/gvisual (15).JPG" alt="e-Gos visual artwork" loading="lazy"></div>
-
-    <div class="egos-visual-grid-item"><img src="images/gvisual (16).JPG" alt="e-Gos visual artwork" loading="lazy"></div>
-    <div class="egos-visual-grid-item"><img src="images/gvisual (17).JPG" alt="e-Gos visual artwork" loading="lazy"></div>
-    <div class="egos-visual-grid-item"><img src="images/gvisual (18).JPG" alt="e-Gos visual artwork" loading="lazy"></div>
-    <div class="egos-visual-grid-item"><img src="images/gvisual (19).JPG" alt="e-Gos visual artwork" loading="lazy"></div>
-    <div class="egos-visual-grid-item"><img src="images/gvisual (20).JPG" alt="e-Gos visual artwork" loading="lazy"></div>
-
-    <div class="egos-visual-grid-item"><img src="images/gvisual (21).JPG" alt="e-Gos visual artwork" loading="lazy"></div>
-    <div class="egos-visual-grid-item"><img src="images/gvisual (22).JPG" alt="e-Gos visual artwork" loading="lazy"></div>
-    <div class="egos-visual-grid-item"><img src="images/gvisual (23).JPG" alt="e-Gos visual artwork" loading="lazy"></div>
-    <div class="egos-visual-grid-item"><img src="images/gvisual (24).JPG" alt="e-Gos visual artwork" loading="lazy"></div>
-    <div class="egos-visual-grid-item"><img src="images/gvisual (25).JPG" alt="e-Gos visual artwork" loading="lazy"></div>
-
-</div>
-
-        </div>
-
-    </section>
-
-<!-- ARTWORK LIGHTBOX -->
-<div
-    class="egos-lightbox"
-    id="egos-lightbox"
-    role="dialog"
-    aria-modal="true"
-    aria-label="Artwork viewer"
-    aria-hidden="true">
-
-    <div class="egos-lightbox-content">
-
-        <button
-            type="button"
-            class="egos-lightbox-close"
-            id="egos-lightbox-close"
-            aria-label="Close artwork viewer">
-            &times;
-        </button>
-
-        <img
-            class="egos-lightbox-image"
-            id="egos-lightbox-image"
-            src=""
-            alt="">
-
-        <div class="egos-lightbox-caption">
-            <h3
-                class="egos-lightbox-title"
-                id="egos-lightbox-title"></h3>
-
-            <p
-                class="egos-lightbox-medium"
-                id="egos-lightbox-medium"></p>
-        </div>
-
-    </div>
-</div>
-
-
-     <!-- ##### Contact Area Start ##### -->
-<section
-    id="contact"
-    class="contact-area section-padding-100 bg-img bg-overlay bg-fixed has-bg-img"
-    style="background-image: url('images/g7testlong.jpg');">
-
-    <div class="container">
-
-        <div class="row">
-
-            <div class="col-12">
-
-                <div
-                    class="section-heading white wow fadeInUp"
-                    data-wow-delay="100ms">
-
-                    <h2>Get in touch</h2>
-
-                    <a href="contact.html"
-                       class="btn oneMusic-btn mt-30 wow fadeInUp"
-                       data-wow-delay="300ms">
-                       Contact
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-<!-- ##### Contact Area End ##### -->
-
-
-<footer class="footer-area">
-
-    <div class="container">
-
-        <div class="row d-flex flex-wrap align-items-center">
-
-            <!-- LOGO + COPYRIGHT -->
-            <div class="col-12 col-md-6">
-
-                <a href="index.html" class="footer-logo">
-                    <img
-                        src="images/longlogomerge1.png"
-                        alt="e-GoS Productions">
-                </a>
-
-                <p class="copywrite-text" style="font-size: 12px;">
-
-                    Copyright &copy;
-
-                    <script>
-                        document.write(new Date().getFullYear());
-                    </script>
-
-                    e-GoS Productions
-
-                </p>
-
-            </div>
-
-
-            <!-- FOOTER NAVIGATION -->
-            <div class="col-12 col-md-6">
-
-                <nav class="footer-nav">
-
-                    <ul>
-
-                        <li>
-                            <a href="index.html">Home</a>
-                        </li>
-
-                        <li>
-                            <a href="audio.html">Audio</a>
-                        </li>
-
-                        <li>
-                            <a href="video.html">Video</a>
-                        </li>
-
-                        <li>
-                            <a href="visual.html">Visual</a>
-                        </li>
-
-                        <li>
-                            <a href="performance.html">Performance</a>
-                        </li>
-
-                        <li>
-                            <a href="event.html">Events</a>
-                        </li>
-
-                        <li>
-                            <a href="contact.html">Contact</a>
-                        </li>
-
-                    </ul>
-
-                </nav>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</footer>
-
-<!-- ##### Footer Area End ##### -->
-
-<!-- WEB POPUP -->
-<div class="modal" id="web-modal">
-    <div class="modal-panel">
-        <button class="modal-close" id="close-web" aria-label="Close">✕</button>
-
-        <iframe
-            src="network-viewer.html"
-            title="Interactive Network">
-        </iframe>
-    </div>
-</div>
-
-
-<!-- ##### All Javascript Script ##### -->
-
-<script src="js/jquery/jquery-2.2.4.min.js"></script>
-<script src="js/bootstrap/popper.min.js"></script>
-<script src="js/bootstrap/bootstrap.min.js"></script>
-<script src="js/plugins/plugins.js"></script>
-<script src="js/active.js"></script>
+    <!-- JAVASCRIPT -->
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <script src="js/bootstrap/popper.min.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="js/plugins/plugins.js"></script>
+    <script src="js/active.js"></script>
+
+    <!-- ARTWORK LIGHTBOX FUNCTIONALITY -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const lightbox = document.getElementById("egos-lightbox");
+            const lightboxImage = document.getElementById("egos-lightbox-image");
+            const lightboxTitle = document.getElementById("egos-lightbox-title");
+            const lightboxMedium = document.getElementById("egos-lightbox-medium");
+            const closeButton = document.getElementById("egos-lightbox-close");
+            const galleryImages = document.querySelectorAll(".egos-visual-grid-item img");
+
+            if (!lightbox || !lightboxImage || !closeButton) {
+                return;
+            }
+
+            function openLightbox(image) {
+                lightboxImage.src = image.src;
+                lightboxImage.alt = image.alt || "Artwork";
+
+                lightboxTitle.textContent = image.dataset.title || "";
+                lightboxMedium.textContent = image.dataset.medium || "";
+
+                lightbox.classList.add("is-open");
+                lightbox.setAttribute("aria-hidden", "false");
+                document.body.style.overflow = "hidden";
+                closeButton.focus();
+            }
+
+            function closeLightbox() {
+                lightbox.classList.remove("is-open");
+                lightbox.setAttribute("aria-hidden", "true");
+                lightboxImage.src = "";
+                document.body.style.overflow = "";
+            }
+
+            galleryImages.forEach(function (image) {
+                image.addEventListener("click", function () {
+                    openLightbox(image);
+                });
+
+                image.setAttribute("tabindex", "0");
+                image.setAttribute("role", "button");
+                image.setAttribute("aria-label", "Open artwork: " + image.alt);
+
+                image.addEventListener("keydown", function (event) {
+                    if (event.key === "Enter" || event.key === " ") {
+                        event.preventDefault();
+                        openLightbox(image);
+                    }
+                });
+            });
+
+            closeButton.addEventListener("click", closeLightbox);
+
+            lightbox.addEventListener("click", function (event) {
+                if (event.target === lightbox) {
+                    closeLightbox();
+                }
+            });
+
+            document.addEventListener("keydown", function (event) {
+                if (event.key === "Escape" && lightbox.classList.contains("is-open")) {
+                    closeLightbox();
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>
