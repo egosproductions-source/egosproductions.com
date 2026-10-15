@@ -2276,14 +2276,14 @@ body.header-docked .header-area .oneMusic-main-menu .nav-brand {
 
 @media only screen and (max-width: 767px) {
     .hero-area .hero-logo-container {
-        transform: translateY(-120px) !important;
+        transform: translateY(-170px) !important;
     }
 }
 
 /* very short landscape screens */
 @media (max-height: 500px) {
   .hero-logo-container {
-    transform: translateY(-12vh);
+    transform: translateY(-16vh);
   }
 }
 
