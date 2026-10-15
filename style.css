@@ -2545,7 +2545,7 @@ body.header-docked .header-area .oneMusic-main-menu .nav-brand {
 /* Short landscape screens */
 @media only screen and (max-height: 500px) {
     .hero-area .hero-logo-container {
-        transform: translateY(-100px);
+        transform: translateY(-160px);
     }
 
     .hero-area .hero-logo-image {
