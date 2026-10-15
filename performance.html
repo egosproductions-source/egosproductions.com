@@ -3,16 +3,13 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
 
     <meta name="description"
         content="e-GoS Productions — video, visual art, performance, music, and experimental work.">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title>e-GoS — Performance</title>
 
@@ -24,482 +21,767 @@
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin>
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-
 
     <!-- =========================================
          PERFORMANCE PAGE CSS
          ========================================= -->
 
-   <style>
+    <style>
+        /* =========================================
+           PAGE RESET
+           ========================================= */
 
-        .video-page {
+        body.performance-page {
             margin: 0;
             padding: 0;
         }
 
-        .video-page section {
-            margin: 0;
+        body.performance-page section {
+            margin-top: 0;
         }
 
-.egos-internal-hero {
+        body.performance-page img {
+            height: auto;
+        }
+
+
+        /* =========================================
+           INTERNAL HERO
+           ========================================= */
+
+        .performance-page .egos-internal-hero {
             position: relative;
-            width: 100%;
-            height: 320px;
-            overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
+            width: 100%;
+            height: 360px;
             margin: 0;
+            padding: 0;
+            overflow: hidden;
         }
 
-        .egos-internal-hero-bg {
+        .performance-page .egos-internal-hero-bg {
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
+            inset: 0;
+            z-index: 0;
             width: 100%;
             height: 100%;
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
-            z-index: 0;
         }
 
-        .egos-internal-hero::after {
+        .performance-page .egos-internal-hero::after {
             content: "";
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.25);
+            inset: 0;
             z-index: 1;
+            background: rgba(0, 0, 0, 0.25);
+            pointer-events: none;
         }
 
-        .egos-internal-hero-content {
+        .performance-page .egos-internal-hero-content {
             position: relative;
             z-index: 2;
-            text-align: center;
-        }
-
-        .egos-internal-hero-content h2 {
-            position: relative;
-            margin: 0;
-            color: #ffffff;
-            font-size: 60px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .egos-internal-hero-content h2 span {
-            position: absolute;
-            left: 50%;
-            top: 0;
-            transform: translateX(-50%);
             width: 100%;
-            color: transparent;
-            -webkit-text-stroke: 1px rgba(255,255,255,0.25);
-            z-index: -1;
+            padding: 20px;
+            text-align: center;
+            box-sizing: border-box;
         }
 
-     .egos-page-title-image {
-    display: block;
-    width: 240px;
-    height: auto;
-    margin: 0 auto;
-    max-width: 100%;
+        .performance-page .egos-internal-hero img.egos-page-title-image {
+            display: block;
+            width: 360px;
+            max-width: 90vw;
+            height: auto;
+            margin: 0 auto;
+        }
 
-    filter:
-        drop-shadow(0 0 4px rgba(255,255,255,0.65))
-        drop-shadow(0 0 12px rgba(255,255,255,0.45))
-        drop-shadow(0 0 24px rgba(255,255,255,0.25));
 
-    animation: eGosLogoGlow 3s ease-in-out 0s infinite;
-}
+        /* =========================================
+           TITLE IMAGE GLOW
+           ========================================= */
+
+        .performance-page .egos-page-title-image {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            filter:
+                drop-shadow(0 0 6px rgba(255, 255, 255, 0.85))
+                drop-shadow(0 0 18px rgba(255, 255, 255, 0.6))
+                drop-shadow(0 0 36px rgba(255, 255, 255, 0.35));
+            animation: eGosTitleGlow 3s ease-in-out infinite;
+        }
 
         @keyframes eGosTitleGlow {
-    0%, 100% {
-        filter:
-            drop-shadow(0 0 6px rgba(255,255,255,0.9))
-            drop-shadow(0 0 20px rgba(255,255,255,0.75))
-            drop-shadow(0 0 40px rgba(255,255,255,0.5));
-    }
-    50% {
-        filter:
-            drop-shadow(0 0 10px rgba(255,255,255,1))
-            drop-shadow(0 0 26px rgba(255,255,255,0.9))
-            drop-shadow(0 0 55px rgba(255,255,255,0.65));
-    }
-}
+            0%,
+            100% {
+                filter:
+                    drop-shadow(0 0 5px rgba(255, 255, 255, 0.7))
+                    drop-shadow(0 0 15px rgba(255, 255, 255, 0.45))
+                    drop-shadow(0 0 28px rgba(255, 255, 255, 0.25));
+            }
+
+            50% {
+                filter:
+                    drop-shadow(0 0 9px rgba(255, 255, 255, 1))
+                    drop-shadow(0 0 24px rgba(255, 255, 255, 0.8))
+                    drop-shadow(0 0 45px rgba(255, 255, 255, 0.55));
+            }
+        }
+
 
         /* =========================================
            MEDIA SECTIONS
            ========================================= */
 
-        .egos-media-section {
+        .performance-page .egos-media-section {
+            position: relative;
             width: 100%;
-
-            padding: 55px 0;
-
             margin: 0;
+            padding: 60px 0;
+            overflow: hidden;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
         }
 
+        .performance-page .egos-media-section::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            background: radial-gradient(
+                ellipse at center,
+                rgba(0, 0, 0, 0.05) 10%,
+                rgba(0, 0, 0, 0.25) 50%,
+                rgba(0, 0, 0, 0.75) 100%
+            );
+            pointer-events: none;
+        }
 
-        .egos-media-container {
+        .performance-page .egos-media-container {
+            position: relative;
+            z-index: 1;
             width: 100%;
             max-width: 1050px;
-
             margin: 0 auto;
-
             padding: 0 20px;
-
             box-sizing: border-box;
         }
 
 
         /* =========================================
-           SECTION HEADINGS
+           FEATURED HEADING
            ========================================= */
 
-        .egos-section-heading {
+        .performance-page .egos-section-heading {
+            width: 100%;
+            margin: 0 0 35px;
+            padding: 0;
             text-align: center;
-            margin-bottom: 35px;
         }
 
-        .egos-section-heading h2 {
-            color: #fff;
-            font-family: 'Exo', sans-serif;
-            font-size: 34px;
+        .performance-page .egos-archive-heading {
+            width: 100%;
+            margin: 0 0 30px;
+            padding: 0;
+            text-align: center;
+        }
+
+        .performance-page img.egos-page-title-image[alt="Featured"] {
+            width: 180px;
+            max-width: 90vw;
+            height: auto;
+            margin: 0 auto;
+        }
+
+
+        /* =========================================
+           FEATURED VIDEO
+           ========================================= */
+
+        .performance-page .egos-featured-video {
+            width: 100%;
+            margin: 0 auto 70px;
+        }
+
+        .performance-page .egos-featured-title {
+            margin: 0 0 18px;
+            padding: 0;
+            color: #ffffff !important;
+            -webkit-text-fill-color: #ffffff !important;
+            font-family: "Exo", sans-serif;
+            font-size: 22px;
             font-weight: 500;
-            letter-spacing: 2px;
-            margin-bottom: 10px;
+            line-height: 1.4;
+            letter-spacing: 1.5px;
+            text-align: center;
+            text-transform: uppercase;
+            opacity: 1;
         }
 
-        .egos-section-heading p {
-            color: rgba(255,255,255,0.7);
-            font-family: 'Exo', sans-serif;
-            font-size: 15px;
+        .performance-page .egos-video-frame {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 9;
             margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: #000000;
         }
-        }/* =========================================
-   MEDIA SECTIONS
-   ========================================= */
 
-.egos-media-section {
-    width: 100%;
-    padding: 55px 0;
-    margin: 0;
+        .performance-page .egos-video-frame iframe {
+            position: absolute;
+            inset: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
 
-    position: relative;
-    overflow: hidden;
-}
+        .performance-page .egos-video-caption {
+            margin: 12px 0 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .performance-page .egos-video-caption p {
+            margin: 0;
+            padding: 0;
+            color: rgba(255, 255, 255, 0.75);
+            font-family: "Exo", sans-serif;
+            font-size: 14px;
+            line-height: 1.6;
+        }
 
 
-.egos-media-container {
-    width: 100%;
-    max-width: 1050px;
-    margin: 0 auto;
-    padding: 0 20px;
-    box-sizing: border-box;
-}
+        /* =========================================
+           ARCHIVAL HEADING
+           ========================================= */
+
+        .performance-page img.egos-page-title-image[alt="Archival"] {
+            width: 240px;
+            max-width: 90vw;
+            height: auto;
+            margin: 0 auto;
+        }
 
 
-/* =========================================
-   MEDIA BACKGROUND VIGNETTE
-   ========================================= */
+        /* =========================================
+           ARCHIVAL VIDEOS
+           ========================================= */
 
-.egos-media-section::before {
-    content: "";
-    position: absolute;
-    inset: 0;
+        .performance-page .egos-archive {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
 
-    background: radial-gradient(
-        ellipse at center,
-        transparent 10%,
-        rgba(0, 0, 0, 0.25) 50%,
-        rgba(0, 0, 0, 0.75) 100%
-    );
+        .performance-page .egos-archive-item {
+            width: 100%;
+            margin: 0 0 48px;
+            padding: 0;
+        }
 
-    z-index: 0;
-    pointer-events: none;
-}
+        .performance-page .egos-archive-item:last-child {
+            margin-bottom: 0;
+        }
 
-.egos-media-section > * {
-    position: relative;
-    z-index: 1;
-}
- 
-<!-- =========================================
-     FEATURED AND ARCHIVE
-     ========================================= -->
+        .performance-page .egos-archive-item .egos-featured-title {
+            margin-bottom: 16px;
+        }
 
-<section
-    class="egos-media-section"
-    style="background-image: url('images/bgoption.jpg');
-           background-size: cover;
-           background-position: center;">
 
-    <!-- FEATURED -->
-    <div class="egos-media-container">
+        /* =========================================
+           CONTACT SECTION
+           ========================================= */
 
-        <div class="egos-section-heading">
+        .performance-page .contact-area {
+            position: relative;
+            margin: 0;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+
+        /* =========================================
+           FOOTER
+           ========================================= */
+
+        .performance-page .footer-logo img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
+
+        /* =========================================
+           TABLET
+           ========================================= */
+
+        @media (max-width: 991px) {
+            .performance-page .egos-media-section {
+                padding: 50px 0;
+            }
+
+            .performance-page .egos-internal-hero img.egos-page-title-image {
+                width: 320px;
+            }
+
+            .performance-page img.egos-page-title-image[alt="Featured"] {
+                width: 165px;
+            }
+
+            .performance-page img.egos-page-title-image[alt="Archival"] {
+                width: 220px;
+            }
+        }
+
+
+        /* =========================================
+           MOBILE
+           ========================================= */
+
+        @media (max-width: 767px) {
+            .performance-page .egos-internal-hero {
+                height: 280px;
+            }
+
+            .performance-page .egos-internal-hero-content {
+                padding: 15px;
+            }
+
+            .performance-page .egos-internal-hero img.egos-page-title-image {
+                width: 280px;
+                max-width: 90vw;
+            }
+
+            .performance-page .egos-media-section {
+                padding: 40px 0;
+            }
+
+            .performance-page .egos-media-container {
+                padding-right: 15px;
+                padding-left: 15px;
+            }
+
+            .performance-page .egos-section-heading {
+                margin-bottom: 25px;
+            }
+
+            .performance-page .egos-archive-heading {
+                margin-bottom: 25px;
+            }
+
+            .performance-page img.egos-page-title-image[alt="Featured"] {
+                width: 150px;
+            }
+
+            .performance-page img.egos-page-title-image[alt="Archival"] {
+                width: 200px;
+            }
+
+            .performance-page .egos-featured-video {
+                margin-bottom: 50px;
+            }
+
+            .performance-page .egos-featured-title {
+                margin-bottom: 14px;
+                font-size: 17px;
+                letter-spacing: 1px;
+            }
+
+            .performance-page .egos-archive-item {
+                margin-bottom: 38px;
+            }
+
+            .performance-page .egos-video-caption p {
+                font-size: 13px;
+            }
+
+            .performance-page .contact-area {
+                background-position: center center;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .performance-page .egos-page-title-image {
+                animation: none;
+            }
+        }
+    </style>
+</head>
+
+
+<body class="performance-page">
+
+    <!-- =========================================
+         PRELOADER
+         ========================================= -->
+
+    <div id="preloader">
+        <div class="preloader-thumbnail" style="display: none;">
+            <img src="img/core-img/preloader.png" alt="">
+        </div>
+    </div>
+
+
+    <!-- =========================================
+         HEADER
+         ========================================= -->
+
+    <header class="header-area">
+        <div class="oneMusic-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+
+                    <nav class="classy-navbar justify-content-between"
+                        id="oneMusicNav"
+                        aria-label="Main navigation">
+
+                        <!-- Logo -->
+                        <a href="index.html" class="nav-brand">
+                            <img src="images/Logo.png" alt="e-Gos">
+                        </a>
+
+                        <!-- Mobile Navigation Toggle -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </div>
+
+                        <!-- Navigation -->
+                        <div class="classy-menu">
+
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap">
+                                    <span class="top"></span>
+                                    <span class="bottom"></span>
+                                </div>
+                            </div>
+
+                            <div class="classynav">
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="audio.html">Audio</a></li>
+                                    <li><a href="video.html">Video</a></li>
+                                    <li><a href="visual.html">Visual</a></li>
+                                    <li><a href="performance.html">Performance</a></li>
+                                    <li><a href="event.html">Events</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+
+                                <!-- Social Links -->
+                                <div class="header-social-links">
+
+                                    <a
+                                        href="https://www.instagram.com/egos.creative/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label="Instagram">
+                                        <i class="fa fa-instagram"></i>
+                                    </a>
+
+                                    <a
+                                        href="https://open.spotify.com/artist/7BO0dsRrLZgyIqVinsUjnA"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label="Spotify">
+                                        <i class="fa fa-spotify"></i>
+                                    </a>
+
+                                    <a
+                                        href="https://www.youtube.com/@e-GosProductions"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label="YouTube">
+                                        <i class="fa fa-youtube"></i>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- =========================================
+         PERFORMANCE HERO
+         ========================================= -->
+
+    <section class="egos-internal-hero" aria-label="Performance">
+
+        <div
+            class="egos-internal-hero-bg"
+            style="background-image: url('images/g8header.jpg');">
+        </div>
+
+        <div class="egos-internal-hero-content">
+            <img
+                src="images/pagetitle (3).png"
+                alt="Performance"
+                class="egos-page-title-image">
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         FEATURED AND ARCHIVAL VIDEOS
+         ========================================= -->
+
+    <section
+        class="egos-media-section"
+        style="background-image: url('images/bgoption.jpg');">
+
+        <!-- FEATURED VIDEO -->
+        <div class="egos-media-container">
+
             <div class="egos-archive-heading">
                 <img
                     src="images/featured.png"
                     alt="Featured"
                     class="egos-page-title-image">
             </div>
+
+            <div class="egos-featured-video">
+
+                <h2 class="egos-featured-title">The Walleye Project</h2>
+
+                <div class="egos-video-frame">
+                    <iframe
+                        src="https://player.vimeo.com/video/1231761863?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                        title="004_The Walleye Project Promo.MOV"
+                        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+                <div class="egos-video-caption">
+                    <p>Featured performance project.</p>
+                </div>
+
+            </div>
         </div>
 
-        <div class="egos-featured-video">
 
-            <h3 class="egos-featured-title">The Walleye Project</h3>
+        <!-- ARCHIVAL VIDEOS -->
+        <div class="egos-media-container">
 
-            <div class="egos-video-frame">
-                <iframe
-                    src="https://player.vimeo.com/video/1231761863?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-                    allowfullscreen
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    title="The Walleye Project">
-                </iframe>
-            </div>
-
-            <div class="egos-video-caption">
-                <p>Featured performance project.</p>
-            </div>
-
-        </div>
-
-    </div>
-
-    <!-- ARCHIVAL -->
-    <div class="egos-media-container">
-
-        <div class="egos-section-heading">
             <div class="egos-archive-heading">
                 <img
                     src="images/pagetitle (6).png"
                     alt="Archival"
                     class="egos-page-title-image">
             </div>
+
+            <div class="egos-archive">
+
+                <!-- PERFORMANCE 1 -->
+                <div class="egos-archive-item">
+
+                    <h3 class="egos-featured-title">
+                        e-Gos @ Moshmellow 2026
+                    </h3>
+
+                    <div class="egos-video-frame">
+                        <iframe
+                            src="https://player.vimeo.com/video/1232508913?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                            title="e-Gos @ Moshmellow 2026"
+                            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+
+                </div>
+
+
+                <!-- PERFORMANCE 2 -->
+                <div class="egos-archive-item">
+
+                    <h3 class="egos-featured-title">
+                        e-Gos @ Greenfinch 2024
+                    </h3>
+
+                    <div class="egos-video-frame">
+                        <iframe
+                            src="https://www.youtube.com/embed/_hGJuHNk_20?si=7zvZ6Nn4xZqQ0h3M"
+                            title="e-Gos @ Greenfinch 2024"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+
+                </div>
+
+
+                <!-- PERFORMANCE 3 -->
+                <div class="egos-archive-item">
+
+                    <h3 class="egos-featured-title">
+                        e-Gos @ Artica 2025
+                    </h3>
+
+                    <div class="egos-video-frame">
+                        <iframe
+                            src="https://player.vimeo.com/video/1232508913?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                            title="e-Gos @ Artica 2025"
+                            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+
+                </div>
+
+            </div>
         </div>
 
-        <div class="egos-archive">
+    </section>
 
-            <!-- PERFORMANCE 1 -->
-            <div class="egos-archive-item">
 
-                <h3 class="egos-featured-title">
-                    e-Gos @ Moshmellow 2026
-                </h3>
+    <!-- =========================================
+         CONTACT SECTION
+         ========================================= -->
 
-                <div class="egos-video-frame">
-                    <iframe
-                        src="https://player.vimeo.com/video/1232508913?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-                        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-                        allowfullscreen
-                        title="e-Gos @ Moshmellow 2026">
-                    </iframe>
+    <section
+        id="contact"
+        class="contact-area section-padding-100 bg-img bg-overlay bg-fixed has-bg-img"
+        style="background-image: url('images/g7testlong.jpg');">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+
+                    <div
+                        class="section-heading white wow fadeInUp"
+                        data-wow-delay="100ms">
+
+                        <h2>Get in touch</h2>
+
+                        <a
+                            href="contact.html"
+                            class="btn oneMusic-btn mt-30 wow fadeInUp"
+                            data-wow-delay="300ms">
+                            Contact
+                        </a>
+
+                    </div>
                 </div>
-
             </div>
-
-            <!-- PERFORMANCE 2 -->
-            <div class="egos-archive-item">
-
-                <h3 class="egos-featured-title">
-                    e-Gos @ Greenfinch 2024
-                </h3>
-
-                <div class="egos-video-frame">
-                    <iframe
-                        src="https://www.youtube.com/embed/_hGJuHNk_20?si=7zvZ6Nn4xZqQ0h3M"
-                        title="e-Gos @ Greenfinch 2024"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen>
-                    </iframe>
-                </div>
-
-            </div>
-
-            <!-- PERFORMANCE 3 -->
-            <div class="egos-archive-item">
-
-                <h3 class="egos-featured-title">
-                    e-Gos @ Artica 2025
-                </h3>
-
-                <div class="egos-video-frame">
-                    <iframe
-                        src="https://player.vimeo.com/video/1232508913?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-                        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-                        allowfullscreen
-                        title="e-Gos @ Artica 2025">
-                    </iframe>
-                </div>
-
-            </div>
-
         </div>
 
-    </div>
+    </section>
 
-</section>
 
-   <!-- ##### Contact Area Start ##### -->
-<section
-    id="contact"
-    class="contact-area section-padding-100 bg-img bg-overlay bg-fixed has-bg-img"
-    style="background-image: url('images/g7testlong.jpg');">
+    <!-- =========================================
+         FOOTER
+         ========================================= -->
 
-    <div class="container">
+    <footer class="footer-area">
+        <div class="container">
 
-        <div class="row">
+            <div class="row d-flex flex-wrap align-items-center">
 
-            <div class="col-12">
+                <!-- Logo and Copyright -->
+                <div class="col-12 col-md-6">
 
-                <div
-                    class="section-heading white wow fadeInUp"
-                    data-wow-delay="100ms">
-
-                    <h2>Get in touch</h2>
-
-                    <a href="contact.html"
-                       class="btn oneMusic-btn mt-30 wow fadeInUp"
-                       data-wow-delay="300ms">
-                       Contact
+                    <a href="index.html" class="footer-logo">
+                        <img
+                            src="images/longlogomerge1.png"
+                            alt="e-Gos Productions">
                     </a>
 
+                    <p class="copywrite-text" style="font-size: 12px;">
+                        Copyright &copy;
+                        <script>
+                            document.write(new Date().getFullYear());
+                        </script>
+                        e-GoS Productions
+                    </p>
+
+                </div>
+
+                <!-- Footer Navigation -->
+                <div class="col-12 col-md-6">
+
+                    <nav class="footer-nav" aria-label="Footer navigation">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="audio.html">Audio</a></li>
+                            <li><a href="video.html">Video</a></li>
+                            <li><a href="visual.html">Visual</a></li>
+                            <li><a href="performance.html">Performance</a></li>
+                            <li><a href="event.html">Events</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+
                 </div>
 
             </div>
+        </div>
+    </footer>
+
+
+    <!-- =========================================
+         WEB POPUP
+         ========================================= -->
+
+    <div class="modal" id="web-modal">
+        <div class="modal-panel">
+
+            <button
+                class="modal-close"
+                id="close-web"
+                type="button"
+                aria-label="Close">
+                ✕
+            </button>
+
+            <iframe
+                src="network-viewer.html"
+                title="Interactive Network">
+            </iframe>
 
         </div>
-
     </div>
 
-</section>
-<!-- ##### Contact Area End ##### -->
-
- <footer class="footer-area">
-
-    <div class="container">
-
-        <div class="row d-flex flex-wrap align-items-center">
-
-            <!-- LOGO + COPYRIGHT -->
-            <div class="col-12 col-md-6">
-
-                <a href="index.html" class="footer-logo">
-                    <img
-                        src="images/longlogomerge1.png"
-                        alt="e-Gos Productions">
-                </a>
-
-                <p class="copywrite-text" style="font-size: 12px;">
-
-                    Copyright &copy;
-
-                    <script>
-                        document.write(new Date().getFullYear());
-                    </script>
-                    e-GoS Productions
-                </p>
-
-            </div>
-
-
-            <!-- FOOTER NAVIGATION -->
-            <div class="col-12 col-md-6">
-
-                <nav class="footer-nav">
-
-                    <ul>
-
-                        <li>
-                            <a href="index.html">Home</a>
-                        </li>
-
-                        <li>
-                            <a href="audio.html">Audio</a>
-                        </li>
-
-                        <li>
-                            <a href="video.html">Video</a>
-                        </li>
-
-                        <li>
-                            <a href="visual.html">Visual</a>
-                        </li>
-
-                        <li>
-                            <a href="performance.html">Performance</a>
-                        </li>
-
-                        <li>
-                            <a href="event.html">Events</a>
-                        </li>
-
-                        <li>
-                            <a href="contact.html">Contact</a>
-                        </li>
-
-                    </ul>
-
-                </nav>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</footer>
-
-<!-- ##### Footer Area End ##### -->
 
     <!-- =========================================
          JAVASCRIPT
+         Load each script only once
          ========================================= -->
 
     <script src="js/jquery/jquery-2.2.4.min.js"></script>
-
     <script src="js/bootstrap/popper.min.js"></script>
-
     <script src="js/bootstrap/bootstrap.min.js"></script>
-
     <script src="js/plugins/plugins.js"></script>
-
     <script src="js/active.js"></script>
-<!-- WEB POPUP -->
-<div class="modal" id="web-modal">
-    <div class="modal-panel">
-        <button class="modal-close" id="close-web" aria-label="Close">✕</button>
+    <script src="js/header-logo.js"></script>
 
-        <iframe
-            src="network-viewer.html"
-            title="Interactive Network">
-        </iframe>
-    </div>
-</div>
+    <!-- Cloudflare Insights -->
+    <script
+        type="module"
+        src="https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920"
+        integrity="sha512-L0ha0OXavK/8okipN9F8BtP84dg9DUhPERbBXzwI6dgTA55d2+yweo3pn5CSFYs45/r8md2+xvUPtTdvTNRfjA=="
+        data-cf-beacon='{"version":"2024.11.0","token":"4c71547abf464724a0f9825d63c633b2","r":1,"spa":2}'
+        crossorigin="anonymous">
+    </script>
 
-
-<!-- ##### All Javascript Script ##### -->
-
-<script src="js/jquery/jquery-2.2.4.min.js"></script>
-<script src="js/bootstrap/popper.min.js"></script>
-<script src="js/bootstrap/bootstrap.min.js"></script>
-<script src="js/plugins/plugins.js"></script>
-<script src="js/active.js"></script>
-<script src="js/header-logo.js"></script>
+</body>
 </html>
