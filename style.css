@@ -29,7 +29,7 @@ h6 {
   margin: 0;
   font-family: "Exo", sans-serif;
   font-weight: 500;
-  color: #000000;
+  color: #fff;
 }
 
 
@@ -2274,11 +2274,10 @@ body.header-docked .header-area .oneMusic-main-menu .nav-brand {
   will-change: transform;
 }
 
-/* reduce the offset on small screens */
-@media (max-width: 767px) {
-  .hero-logo-container {
-    transform: translateY(-12vh);
-  }
+@media only screen and (max-width: 767px) {
+    .hero-area .hero-logo-container {
+        transform: translateY(-80px) !important;
+    }
 }
 
 /* very short landscape screens */
