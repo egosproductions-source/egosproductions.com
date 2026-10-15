@@ -2276,7 +2276,7 @@ body.header-docked .header-area .oneMusic-main-menu .nav-brand {
 
 @media only screen and (max-width: 767px) {
     .hero-area .hero-logo-container {
-        transform: translateY(-80px) !important;
+        transform: translateY(-120px) !important;
     }
 }
 
