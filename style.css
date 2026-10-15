@@ -1618,7 +1618,7 @@ font-family: "Exo", sans-serif;
 
     .footer-area .footer-nav ul {
         justify-content: center;
-        gap: 5px;
+        gap: 3px;
         margin-top: 20px !important;
     }
 
