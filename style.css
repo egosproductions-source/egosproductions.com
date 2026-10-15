@@ -2422,3 +2422,22 @@ body.header-docked .header-area .oneMusic-main-menu .nav-brand {
 #about {
   scroll-margin-top: 90px;
 }
+
+   @media (max-width: 991px) {
+            .egos-media-section {
+                padding: 50px 0;
+            }
+
+            .egos-internal-hero img.egos-page-title-image {
+                width: 320px;
+            }
+
+           img.egos-page-title-image[alt="Featured"] {
+                width: 160px;
+            }
+
+        img.egos-page-title-image[alt="Archival"] {
+                width: 160px;
+            }
+        }
+
