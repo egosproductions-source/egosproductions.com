@@ -2503,7 +2503,7 @@ body.header-docked .header-area .oneMusic-main-menu .nav-brand {
     justify-content: center;
 
     /* Negative = move UP; positive = move DOWN */
-    transform: translateY(-220px);
+    transform: translateY(-190px);
 }
 
 /* Preserve the glowing entrance animation */
@@ -2533,7 +2533,7 @@ body.header-docked .header-area .oneMusic-main-menu .nav-brand {
     }
 
     .hero-area .hero-logo-container {
-        transform: translateY(-220px);
+        transform: translateY(-260px);
     }
 
     .hero-area .hero-logo-image {
