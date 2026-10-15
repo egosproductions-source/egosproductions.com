@@ -2367,7 +2367,7 @@ body.header-docked .header-area .oneMusic-main-menu .nav-brand {
     justify-content: center;
 
     /* Negative = move UP; positive = move DOWN */
-    transform: translateY(-190px);
+    transform: translateY(-210px);
 }
 
 /* Preserve the glowing entrance animation */
