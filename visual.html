@@ -54,12 +54,7 @@
             background-repeat: no-repeat;
         }
 
-        @media only screen and (max-width: 767px) {
-   .egos-internal-hero-bg {
-        background-size: auto 100%;
-        background-position: 0% 40%;
-    }
-}
+
         .egos-internal-hero::after {
             content: "";
             position: absolute;
@@ -370,6 +365,12 @@ padding: 60px 0 70px;
                 max-width: 170px;
             }
         }
+                @media only screen and (max-width: 767px) {
+   .egos-internal-hero-bg {
+        background-size: auto 100%;
+        background-position: 0% 40% !important;
+    }
+}
     </style>
 </head>
 
