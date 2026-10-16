@@ -2440,18 +2440,6 @@ body.header-docked .header-area .oneMusic-main-menu .nav-brand {
                 width: 160px;
             }
         }
-  html, body {
-    margin: 0;
-    min-height: 100%;
-    background: #000;
-  }
-  body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-    box-sizing: border-box;
-  }
   .egos-follow-link {
     display: inline-block;
     width: min(100%, 1000px);
