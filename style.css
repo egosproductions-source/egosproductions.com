@@ -2204,7 +2204,7 @@ body.header-docked .header-area .oneMusic-main-menu .nav-brand {
     }
 
     .hero-area .hero-logo-container {
-       transform: translateY(-6vh);
+     transform: translateY(-12vh);
     }
 
     .hero-area .hero-logo-image {
@@ -2216,7 +2216,7 @@ body.header-docked .header-area .oneMusic-main-menu .nav-brand {
 /* Short landscape screens */
 @media only screen and (max-height: 500px) {
     .hero-area .hero-logo-container {
-        transform: translateY(-200px);
+             transform: translateY(-12vh);
     }
 
     .hero-area .hero-logo-image {
