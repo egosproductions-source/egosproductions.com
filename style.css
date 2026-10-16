@@ -2007,12 +2007,6 @@ body.header-docked .header-area .oneMusic-main-menu .nav-brand {
     justify-content: center;
 }
 
-/* raise the hero logo up (adjust value as needed) */
-.hero-logo-container {
-  transform: translateY(-20vh);
-  /* preserve any existing transforms by chaining */
-  will-change: transform;
-}
 
 @media only screen and (max-width: 767px) {
     .hero-area .hero-logo-container {
@@ -2247,7 +2241,7 @@ body.header-docked .header-area .oneMusic-main-menu .nav-brand {
 /* Short landscape screens */
 @media only screen and (max-height: 500px) {
     .hero-area .hero-logo-container {
-        transform: translateY(-200px);
+        transform: translateY(-100px);
     }
 
     .hero-area .hero-logo-image {
