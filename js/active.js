@@ -63,8 +63,7 @@ items: 5,
 margin: 30,
 loop: true,
 nav: true,
-navText: ['<i class="fa fa-angle-double-left"></i>', '<i class="fa
-fa-angle-double-right"></i>'],
+navText: ['<i class="fa fa-angle-double-left"></i>', '<i class="fa fa-angle-double-right"></i>'],
 dots: false,
 autoplay: true,
 autoplayTimeout: 5000,
@@ -500,8 +499,8 @@ function shareEGos(event) {
 event.preventDefault();
 if (navigator.share) {
 navigator.share({
-title: 'e-Gos Productions',
-text: 'Check out e-Gos Productions',
+title: 'e-GoS Productions',
+text: 'Check out e-GoS Productions',
 url: window.location.href
 });
 } else if (navigator.clipboard) {
