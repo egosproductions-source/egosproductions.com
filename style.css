@@ -2235,7 +2235,7 @@ body.header-docked .header-area .oneMusic-main-menu .nav-brand {
     }
 
     .hero-area .hero-logo-container {
-        transform: translateY(-300px);
+       transform: translateY(-12vh);
     }
 
     .hero-area .hero-logo-image {
