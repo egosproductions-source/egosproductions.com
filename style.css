@@ -1996,31 +1996,6 @@ body.header-docked .header-area .oneMusic-main-menu .nav-brand {
     padding: 0;
 }
 
-/* Preserve your existing entrance animation */
-.hero-area .hero-logo-container {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-@media only screen and (max-width: 767px) {
-    .hero-area .hero-logo-container {
-        transform: translateY(-200px) !important;
-    }
-}
-
-/* very short landscape screens */
-@media (max-height: 500px) {
-  .hero-logo-container {
-    transform: translateY(-16vh);
-  }
-}
-
 /* Keep the glowing logo responsive */
 .hero-area .hero-image-effect {
     width: 100%;
@@ -2199,7 +2174,7 @@ body.header-docked .header-area .oneMusic-main-menu .nav-brand {
     justify-content: center;
 
     /* Negative = move UP; positive = move DOWN */
-    transform: translateY(-210px);
+    transform: translateY(-200px);
 }
 
 /* Preserve the glowing entrance animation */
@@ -2241,7 +2216,7 @@ body.header-docked .header-area .oneMusic-main-menu .nav-brand {
 /* Short landscape screens */
 @media only screen and (max-height: 500px) {
     .hero-area .hero-logo-container {
-        transform: translateY(-100px);
+        transform: translateY(-200px);
     }
 
     .hero-area .hero-logo-image {
