@@ -32,14 +32,6 @@ h6 {
   color: #fff;
 }
 
-
-.exo-<uniquifier> {
-  font-family: "Exo", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 333;
-  font-style: normal;
-}
-
 ul,
 ol {
   margin: 0; }
