@@ -588,6 +588,9 @@ closeLightbox();
 }
 });
 });
+
+var arrow = document.querySelector('.arrow');
+if (arrow) {
 const arrow = document.querySelector('.arrow');
 window.addEventListener('scroll', () => {
 if (window.scrollY > 50) {
@@ -596,3 +599,5 @@ arrow.classList.add('hidden');
 arrow.classList.remove('hidden');
 }
 });
+
+}
