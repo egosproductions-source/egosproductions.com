@@ -2271,3 +2271,66 @@ body.header-docked .header-area .oneMusic-main-menu .nav-brand {
   @media (prefers-reduced-motion: reduce) {
     .egos-follow-link { transition: none; }
   }
+
+/* =========================================
+   FOOTER: compact, black with white text
+   ========================================= */
+
+.footer-area {
+    background-color: #000 !important;
+    padding: 12px 0 !important;
+}
+
+/* Copyright text */
+.footer-area .copywrite-text,
+.footer-area .copywrite-text a,
+.footer-area p {
+    color: #fff !important;
+    font-size: 11px !important;
+    line-height: 1.4;
+    margin: 0 !important;
+}
+
+/* Nav links */
+.footer-area .footer-nav ul li a {
+    color: #fff !important;
+    font-size: 11px;
+    height: 28px;
+    line-height: 28px;
+    padding: 0 6px;
+}
+
+.footer-area .footer-nav ul li a:hover {
+    color: #fff !important;
+    opacity: 0.7;
+}
+
+/* Logo */
+.footer-area .footer-logo img,
+.footer-logo img {
+    max-width: 110px;
+  filter: brightness(0) invert(1);
+}
+
+@media only screen and (max-width: 767px) {
+    .footer-area {
+        padding: 10px 0 !important;
+    }
+
+    .footer-area .footer-logo img,
+    .footer-logo img {
+        max-width: 90px;
+      filter: brightness(0) invert(1);
+    }
+
+    .footer-area .copywrite-text {
+        font-size: 9px !important;
+    }
+
+    .footer-area .footer-nav ul li a {
+        font-size: 10px;
+        height: 26px;
+        line-height: 26px;
+        padding: 0 5px;
+    }
+}
