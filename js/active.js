@@ -503,12 +503,10 @@ text: 'Check out e-GoS Productions',
 url: window.location.href
 });
 } else if (navigator.clipboard) {
-navigator.clipboard.writeText(window.location.href).then(function() {
-alert('Link copied! You can now paste it anywhere to share e-Gos
-Productions.');
+navigator.clipboard.writeText(window.location.href).then(function() {alert('Link copied! You can now paste it anywhere to share e-GoS Productions.');
 });
 } else {
-alert('Copy this page URL to share e-Gos Productions: ' +
+alert('Copy this page URL to share e-GoS Productions: ' +
 window.location.href);
 }
 }
