@@ -1788,7 +1788,8 @@ body.header-docked .header-area .oneMusic-main-menu .nav-brand {
 }
   @media only screen and (max-width: 767px) {
     #contact {
-        background-position: 65% center !important;
+        background-size: auto 140% !important;   /* zoom: bigger = closer */
+        background-position: 65% 40% !important; /* which part stays in view */
     }
 }
    
