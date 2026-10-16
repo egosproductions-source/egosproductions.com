@@ -2440,4 +2440,39 @@ body.header-docked .header-area .oneMusic-main-menu .nav-brand {
                 width: 160px;
             }
         }
-
+  html, body {
+    margin: 0;
+    min-height: 100%;
+    background: #000;
+  }
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+  .egos-follow-link {
+    display: inline-block;
+    width: min(100%, 1000px);
+    line-height: 0;
+    border: 0;
+    border-radius: 0;
+    background: #000;
+    text-decoration: none;
+    transition: filter .2s ease, transform .2s ease;
+  }
+  .egos-follow-link img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .egos-follow-link:hover,
+  .egos-follow-link:focus-visible {
+    filter: brightness(1.14);
+    transform: translateY(-2px);
+    outline: none;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .egos-follow-link { transition: none; }
+  }
