@@ -2270,41 +2270,6 @@ body.header-docked .header-area .oneMusic-main-menu .nav-brand {
   .arrow { bottom: 18px; }
 }
 
-/* Keep the footer logo at its original size and position */
-.footer-logo {
-    display: block;
-    width: auto;
-    max-width: 220px;
-    height: auto;
-    margin: 0;
-}
-
-.footer-logo img,
-.footer-area .footer-logo img {
-    display: block;
-    width: 100%;
-    max-width: 220px;
-    height: auto;
-    object-fit: contain;
-}
-
-/* Prevent the footer layout from stretching the logo */
-.footer-area .row {
-    align-items: center;
-}
-
-/* Mobile footer logo */
-@media only screen and (max-width: 767px) {
-    .footer-logo,
-    .footer-logo img,
-    .footer-area .footer-logo img {
-        width: auto;
-        max-width: 170px;
-        height: auto;
-    }
-}
-
-
 
 /* Keep the homepage hero full-screen */
 .hero-area {
