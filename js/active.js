@@ -330,8 +330,7 @@ ctx.fill();
 // label
 ctx.fillStyle = this.color === palette.white ? "#f8fafc" :
 this.color;
-ctx.font = this.isBold ? "700 13px Segoe UI, sans-serif" : "600
-10px Segoe UI, sans-serif";
+ctx.font = this.isBold ? "700 13px Segoe UI, sans-serif" : "600 10px Segoe UI, sans-serif";
 ctx.textAlign = "center";
 ctx.textBaseline = "middle";
 ctx.letterSpacing = "0.08em";
