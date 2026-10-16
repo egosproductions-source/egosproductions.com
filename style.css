@@ -2335,3 +2335,9 @@ body.header-docked .header-area .oneMusic-main-menu .nav-brand {
         padding: 0 5px;
     }
 }
+
+@media only screen and (max-width: 767px) {
+    .egos-internal-hero-bg {
+        background-position: var(--mobile-pos, center) !important;
+    }
+}
