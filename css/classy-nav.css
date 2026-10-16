@@ -607,6 +607,43 @@ body.header-docked .oneMusic-main-menu .classy-navbar .nav-brand {
     pointer-events: auto !important;
 }
 
+/* Keep the footer logo at its original size and position */
+.footer-logo {
+    display: block;
+    width: auto;
+    max-width: 220px;
+    height: auto;
+    margin: 0;
+}
+
+.footer-logo img,
+.footer-area .footer-logo img {
+    display: block;
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Prevent the footer layout from stretching the logo */
+.footer-area .row {
+    align-items: center;
+}
+
+/* Mobile footer logo */
+@media only screen and (max-width: 767px) {
+    .footer-logo,
+    .footer-logo img,
+    .footer-area .footer-logo img {
+        width: auto;
+        max-width: 170px;
+        height: auto;
+    }
+}
+
+
+
+
 /* Fallback Responsive CSS */
 
 /*# sourceMappingURL=classy-nav.css.map */
