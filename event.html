@@ -35,7 +35,10 @@
         href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 
-
+ <!-- STYLESHEETS -->
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@7.1.5/skeleton.css' rel='stylesheet' />
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@7.1.5/themes/monarch/theme.css' rel='stylesheet' />
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@7.1.5/themes/monarch/palettes/purple.css' rel='stylesheet' />
     <!-- Small Internal Hero CSS -->
     <style>
 
@@ -165,6 +168,24 @@
 }
 
     </style>
+    
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const calendarEl = document.getElementById("calendar");
+        const calendar = new FullCalendar.Calendar(calendarEl, {
+     googleCalendarApiKey: "AIzaSyAu6veWS899avI_eQdKPRb938eypzy77qA",
+      events: {
+          googleCalendarId: "5ae33f06b6ba49ee1f077c31c321829966601b6419a53ea7f5d7918280d917a4@group.calendar.google.com"
+      }
+        });
+        calendar.render();
+      });
+    </script>
+  </head>
+  <body>
+    <div id="calendar"></div>
+  </body>
+</html>
 
 </head>
 
@@ -299,8 +320,7 @@
            background-size: cover;
            background-position: center;">
 
-<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FChicago&showPrint=0&title=e-GoS%20Events&src=NWFlMzNmMDZiNmJhNDllZTFmMDc3YzMxYzMyMTgyOTk2NjYwMWI2NDE5YTUzZWE3ZjVkNzkxODI4MGQ5MTdhNEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23795548&color=%230b8043" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-
+ <div id="calendar"></div>
 
     </div>
     
@@ -436,5 +456,12 @@
 <script src="js/plugins/plugins.js"></script>
 <script src="js/active.js"></script>
 <script src="js/header-logo.js"></script>
+    <!-- STANDARD JS -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@7.1.5/all/global.js"></script>
+    <!-- GOOGLE CALENDAR PLUGIN. must go AFTER the standard JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/google-calendar@7.1.5/global.js"></script>
+
+    <!-- THEME JS -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@7.1.5/themes/monarch/global.js"></script>
 
 </html>
