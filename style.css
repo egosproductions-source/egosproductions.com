@@ -2586,3 +2586,90 @@ body.header-docked .header-area .oneMusic-main-menu .nav-brand {
 	background-color: rgba(0, 0, 0, 0.6);
 	color: rgb(225, 225, 225);
 }
+
+#egos.carousel {
+	width: 79%;
+}
+
+#egos.carousel .prev {
+	transform: translate(-100%);
+}
+
+#egos.carousel .queue {
+	transform: translate(100%);
+}
+
+#egos .carousel__viewport-wrapper {
+	border-radius: 9% / 12%;
+	border: medium;
+}
+
+#egos .carousel__viewport-wrapper:hover .carousel__controls-background--arrow {
+	opacity: 0.5;
+}
+
+#egos .carousel__viewport-wrapper:hover .carousel__controls-background--indicator {
+	}
+
+#egos .carousel__viewport {
+	padding-bottom: 56.25%;
+}
+
+#egos .carousel__slide-container {
+	background-color: black;
+	transition: transform 0.3s ease-in;
+}
+
+#egos .carousel__slide-overlay {
+	background-color: black;
+	opacity: 0.4;
+	display: none;
+}
+
+#egos .carousel__indicator-bar {
+	visibility: visible;
+}
+
+#egos .carousel__indicator-bar--interior:hover .carousel__controls-background--indicator {
+	opacity: 0.5;
+}
+
+#egos .carousel__indicator-marker {
+	border: 1px solid rgb(255, 255, 255);
+	opacity: 0.6;
+}
+
+#egos .carousel__indicator-marker--active {
+	background-color: rgb(255, 255, 255);
+	box-shadow: rgb(255, 255, 255) 0px 0px 5px 0px;
+	pointer-events: none;
+	opacity: 1;
+}
+
+#egos .carousel__controls svg {
+	opacity: 0.7;
+}
+
+#egos .carousel__controls path {
+	stroke: white;
+}
+
+#egos .carousel__controls-background {
+	background-color: rgb(0, 0, 0);
+}
+
+#egos .carousel__controls-background::after {
+	background-color: rgb(0, 0, 0);
+}
+
+#egos .carousel__controls-background--arrow {
+	box-shadow: rgb(0, 0, 0) 0px 0px 8px 9px;
+	opacity: 0;
+	display: block;
+}
+
+#egos .carousel__controls-background--indicator {
+	box-shadow: rgb(0, 0, 0) 0px 0px 8px 9px;
+	opacity: 0;
+	display: block;
+}
