@@ -1231,3 +1231,8 @@ class Carousel {
     }
     this.state.slidesArr.sort(compare);
   }}
+new Carousel(
+	egos,
+	[yourImageArrayHere],
+	{ autoplay: '5000', aspectRatio: '16:9' }
+)
